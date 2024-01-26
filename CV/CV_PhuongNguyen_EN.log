@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.6.1)  26 JAN 2024 14:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.6.1)  26 JAN 2024 16:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -410,7 +410,7 @@ File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 )
 
 LaTeX Warning: Unused global option(s):
-    [9pt].
+    [8pt].
 
 (./CV_PhuongNguyen_EN.aux)
 \openout1 = `CV_PhuongNguyen_EN.aux'.
@@ -510,86 +510,89 @@ LaTeX Info: Redefining \nameref on input line 100.
 \openout3 = `CV_PhuongNguyen_EN.out'.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 112.
+(Font)              <17.28> on input line 108.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 112.
+(Font)              <12> on input line 108.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 230.
+(Font)              <8> on input line 108.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 230.
+(Font)              <6> on input line 108.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 108.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 114.
 
-Overfull \hbox (5.02667pt too wide) in paragraph at lines 754--755
-[]\OT1/cmr/m/n/10 Associate Ed-i-tor of Springer Ap-plied In-tel-li-gence ([][]
-$\OT1/cmtt/m/n/10 https : / / www . springer . com / journal /
- []
-
-
-Overfull \hbox (1.41629pt too wide) in paragraph at lines 755--756
+Overfull \hbox (1.41629pt too wide) in paragraph at lines 760--761
 []\OT1/cmr/m/n/10 Member of the Ed-i-to-rial Board of the Soft-ware Qual-ity Jo
 ur-nal ([][]$\OT1/cmtt/m/n/10 https : / / www . springer .
  []
 
+
+Overfull \hbox (0.50043pt too wide) in paragraph at lines 762--765
+[]\OT1/cmr/m/n/10 Member of the Ed-i-to-rial Board of Com-put-ers & Ed-u-ca-tio
+n: Ar-ti-fi-cial In-tel-li-gence ([][]$\OT1/cmtt/m/n/10 https :
+ []
+
+
+Overfull \hbox (38.74977pt too wide) in paragraph at lines 780--782
+\OT1/cmr/m/it/10 mend-ing Third-party Li-braries\OT1/cmr/m/n/10 ,'' Journ-al of
+ Sys-tems and Soft-ware, DOI: [][]10.1016/j.jss.2019.110460[][]. 
+ []
+
+
+Overfull \hbox (15.2388pt too wide) in paragraph at lines 783--785
+\OT1/cmr/m/it/10 ing Third-party Li-braries\OT1/cmr/m/n/10 ,'' Journ-al of Sys-
+tems and Soft-ware, DOI: [][]10.1016/j.jss.2019.110460[][],
+ []
+
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
-Underfull \hbox (badness 1668) in paragraph at lines 1123--1124
-[]$[]$\OT1/cmr/m/n/10 , Juri Di Rocco, Da-vide Di Rus-cio, Mas-si-m-il-iano Di 
-Penta,
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 3039) in paragraph at lines 1198--1199
+[]$[]$\OT1/cmr/m/n/10 , Juri Di Rocco, Da-vide Di Rus-cio, Lina Ochoa, Thomas
  []
 
 
-Underfull \hbox (badness 1400) in paragraph at lines 1123--1124
-\OT1/cmr/m/n/10 El-se-vier Jour-nal of Sys-tems and Soft-ware (JSS), 2020, ISSN
-: 0164-1212, DOI:
+Underfull \hbox (badness 1270) in paragraph at lines 1198--1199
+\OT1/cmr/m/it/10 API Func-tion Calls and Us-age Pat-terns\OT1/cmr/m/n/10 ,'' in
+ Pro-ceed-ings of ICSE 2019, DOI:
  []
 
-
-Underfull \hbox (badness 1137) in paragraph at lines 1137--1140
-\OT1/cmr/m/n/10 Rus-cio, Mas-si-m-il-iano Di Penta, ``\OT1/cmr/m/it/10 Deal-ing
- with Pop-u-lar-ity Bias in Rec-om-mender
- []
-
-
-Underfull \hbox (badness 1454) in paragraph at lines 1137--1140
-\OT1/cmr/m/it/10 Sys-tems for Third-party Li-braries: How far Are We?\OT1/cmr/m
-/n/10 ,'' in Pro-ceed-ings of the
- []
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1403.
-[3]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1403.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1409.
+[2]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1409.
  (./CV_PhuongNguyen_EN.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1403.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1403.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1409.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1409.
 
 Package rerunfilecheck Info: File `CV_PhuongNguyen_EN.out' has not changed.
-(rerunfilecheck)             Checksum: CC5895339538E768E73D214ABADD472B;317.
+(rerunfilecheck)             Checksum: B53BC7622F856BBEF25D7FC33C42F63E;252.
  ) 
 Here is how much of TeX's memory you used:
- 8029 strings out of 481239
- 120612 string characters out of 5920378
+ 8032 strings out of 481239
+ 120681 string characters out of 5920378
  411256 words of memory out of 5000000
- 23120 multiletter control sequences out of 15000+600000
- 537950 words of font info for 43 fonts, out of 8000000 for 9000
+ 23124 multiletter control sequences out of 15000+600000
+ 538873 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,8n,41p,1207b,435s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,8n,41p,1207b,403s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texm
-f/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on CV_PhuongNguyen_EN.pdf (3 pages, 167480 bytes).
+mf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texmf
+/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on CV_PhuongNguyen_EN.pdf (2 pages, 161936 bytes).
 PDF statistics:
- 150 PDF objects out of 1000 (max. 8388607)
- 130 compressed objects within 2 object streams
- 22 named destinations out of 1000 (max. 500000)
- 49 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 144 PDF objects out of 1000 (max. 8388607)
+ 125 compressed objects within 2 object streams
+ 21 named destinations out of 1000 (max. 500000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
