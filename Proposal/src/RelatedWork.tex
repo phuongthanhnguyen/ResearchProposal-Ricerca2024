@@ -1,0 +1,128 @@
+
+
+
+%\subsection{Classification of attacks} \label{sec:Classification}
+%In the research stay at VIASM, I am going to focus on poisoning attacks as they are easy to conduct, yet effective. The remaining attacks are left to my future work.
+
+%=====================
+%Fairness in recommender systems is two topics that have attracted attention from the research community in recent years. Due to the space limit, this section only reviews the most notable studies.
+%=====================
+
+% in these topics. %concerning fairness and adversarial machine learning 
+%for general-purpose recommender systems. 
+
+%of AML has been widely studied in other domains, according to our investigation.
+%\vspace{-.3cm}
+
+%\subsection{Fairness in recommender systems} \label{sec:RelatedWorkBias}
+
+%\textbf{Fairness.} 
+
+
+Through a literature review, we come across seven relevant third-party library recommender systems (TPL RSSEs), which are reported in %in %, and they are %tools %described as follows. The systems are shown 
+Table~\ref{tab:summary}. We pay attention to their working mechanisms as well as the possibility of being exposed to popularity bias. 
+
+Overall, the table suggests that diverse underlying techniques are used to recommend libraries. In particular, besides collaborative-filtering based approaches~\cite{NGUYEN2019110460,6671293}, there are those that employ clustering algorithms~\cite{SAIED2018164}, %Latent Dirichlet Allocation~\cite{ZHAO20192018EDP7227}, 10.1007/978-3-030-64694-3_13, 10.1007/978-3-031-00126-0_26
+or NSGA-II~\cite{Ouni:2017:SSL:3032135.3032325}. Notably, deep neural networks~\cite{9043686,10.1145/3468264.3468552,9054865} and matrix factorization~\cite{9043686} also found their application in TPL recommendations. \LR works on top of a light collaborative-filtering technique and association mining, retrieving libraries that are used by popular projects. LibCUP~\cite{SAIED2018164} mines usage patterns using DBSCAN, a hierarchical clustering algorithm. LibFinder \cite{Ouni:2017:SSL:3032135.3032325} makes use of the NSGA-II (\revised{Non-dominated Sorting Genetic Algorithm}) multi-objective search algorithm to perform recommendations. \CR~\cite{NGUYEN2019110460} exploits a graph-based structure to recommend relevant TPLs given the developer's context. %It works based on a collaborative filtering engine to rank the outcomes. 
+Req2Lib \cite{9054865} suggests relevant TPLs starting from the textual description of the requirements to handle the cold-start problem by combining a Sequence-to-Sequence network with a doc2vec pre-trained model. %that exploits a corpus from Stack Overflow posts. 
+% according to the cosine similarity.
+Similarly, GRec \cite{10.1145/3468264.3468552} encodes mobile apps, TPLs, and their interactions in an app-library graph. Afterward, it uses a graph neural network to distill the relevant features to increase the overall accuracy. Altogether, \emph{all these systems are not conceived to mitigate the effect of popularity bias}. %To this end, the algorithm maximizes both the co-usage and the semantic similarity of a candidate library. 
+
+%It uses a state-of-the-art word embedding technique to extract questions and answer snippets which can offer additional concerning the recommended analogical library. 
+% %go a step further by proposing 
+%XLibRec eventually computes a weight-based cosine similarity using the word vectors extracted from this data  to recommend analogical libraries.
+%The empirical evaluation conducted on two state-of-the-art approaches shows that the list of recommended libraries can be altered by considering the user's needs. 
+
+Apart from the seven studies presenting TPL RSSEs previously described, the remaining four %of the eleven belonging to the combination of LIB and REC, 
+tackle different issues as reported as follows. Chen \etal \cite{8630054} proposed an unsupervised deep learning approach to embed both usage and description semantics of TPLs to infer mappings at the API level. %The model is trained using the information encoded as vectors from 135,127 GitHub projects. 
+An approach~\cite{10.1007/s10664-018-9657-y} based on Stack Overflow was proposed to recommend analogical libraries, \ie a library similar to the ones that developers already use. Nafi \etal \cite{9825781} developed XLibRec, a tool that recommends analogical libraries across different programming languages. %Besides the information obtained from Stack Overflow posts, the tool gathers descriptions from %\texttt{Libraries.io}, a third-party website. 
+Rubei \etal \cite{9825861} investigated the usage of a learning-to-rank mechanism to embody explicit user feedback in TPLs recommenders. In summary, \emph{there is no paper among the ones discussed above copes with popularity bias in RSSEs.}
+
+
+
+Chakraborty \etal \cite{ChakrabortyM0M20} %advocated for the need for fairness analysis and testing in machine learning software. They 
+developed Fairway to defuse bias during pre-processing (\ie before training) and in-processing (\ie during training). %, and uses multi-objective optimization to avoid that fairness compromises the machine learning performance. 
+In their subsequent work, Chakraborty \etal \cite{ChakrabortyMM21} 
+%investigated the root-cause of bias in machine learning software, and determined whether such a bias depends on how the data was selected or to the labels were assigned to data. They
+proposed Fair-SMOTE an approach to fairness-aware data rebalancing,  that leverages situation testing to balance fair-sensitive labels, outperforming previously-proposed approaches, including %the previously developed 
+Fairway. %
+%Chakraborty  \etal \cite{ChakrabortyPM20} showed how the use of explainable models such as K nearest neighbors can, at the same time, be more transparent in terms of fairness than black-box models, while still ensuring good performances.
+%While Chakraborty \etal deal with fairness by handling fair-related attributes, in RQ$_3$ of this work we leverage a technique inspired  by Web search~\cite{10.1145/1772690.1772780} to diversify TPL recommendations.
+Multi-objective approaches like the one by Chakraborty \etal can also be applied in tackling popularity bias in TPL RSSEs, however, the goal is different, \ie re-ranking rare items that could be useful for some projects instead of coping with fairness-related features. 
+While existing studies have investigated bias in other application domains, our work~\cite{10174041} is the first one to perform a thorough review on popularity bias for RSSEs, and specifically for TPL RSSEs. %We reviewed literature, and evaluated the behavior of four existing TPL RSSEs. % as well as attempting to mitigate popularity bias.
+
+
+
+\begin{table*}[t!]
+	\centering
+	%	\vspace{-.3cm}
+	%	\footnotesize
+	\scriptsize
+	\caption{State-of-the-art recommender systems for mining TPLs (Listed in chronological order).}
+	\begin{tabular}{|p{1.40cm} | p{1.1cm} | p{0.4cm} | p{1.50cm} | p{4.4cm} |p{4.4cm} | p{0.45cm} |}	\hline
+		\textbf{System} & \textbf{Venue} & \textbf{Year} & \textbf{Data source} & \textbf{Working mechanism} & \textbf{Prone to popularity bias?} & \textbf{Avail.}  \\ \hline
+		%		& \multicolumn{4}{|c|}{\textbf{Library recommendation}} \\  \hline 
+		%        {\multirow{6}{*}{\rotatebox[origin=c]{90}{\textbf{Library rec.}}}} & LibRec~\cite{6671293} & WCRE & 2013 & \GH  \\ \cline{2-5} %WRCE\footnote{WRCE was the former edition of SANER}
+		%		\rowcolor{lightgray}
+		\LR~\cite{6671293} & WCRE & 2013 & \GH & \LR is built on top of a light collaborative-filtering technique and association mining, looking for libraries that are used by popular projects & The system is exposed to popularity bias by its nature, retrieving only popular libraries thanks to association mining~\cite{10.1145/170035.170072} & \cellcolor{lightgray}\faCheck  \\ \hline
+		LibCUP~\cite{SAIED2018164} & JSS & 2017 & \GH  & Usage patterns are discovered by means of DBSCAN~\cite{10.5555/3001460.3001507} -- a hierarchical clustering algorithm & DBSCAN groups libraries that are most frequently co-used by projects. Therefore, popular libraries tend to get recommended more often  & \untick  \\ \hline
+		%LibD~\cite{7985674} & ICSE & 2017 & Android markets & &  & \untick  \\ \hline
+		LibFinder~\cite{Ouni:2017:SSL:3032135.3032325} & IST & 2018 & \GH & NSGA-II~\cite{DBLP:journals/tec/DebAPM02} is used to maximize co-usage of libraries, the similarity with the candidates, and the total number of recommended items & %One of the heuristics adopted: 
+		A library $L$ can be useful for a system $S$ if $L$ is commonly used with one or more libraries adopted by $S$. Evidence of bias is also reported in the paper & \untick \\ \hline
+		
+		%AppLibRec~\cite{ZHAO20192018EDP7227} & IEICE & 2019 & \GH & Latent Dirichlet Allocation and collaborative-filtering techniques & Because of the collaborative filtering mechanism, AppLibRec introduces popular libraries to projects & \untick \\ \hline
+		
+		\CR~\cite{NGUYEN2019110460} & JSS & 2020 & \GH & \CR employs a collaborative-filtering technique to mine TPLs from similar projects & The system is prone to popularity bias as it recommends libraries coming from projects that are similar & \cellcolor{lightgray}\faCheck  \\ \hline
+		Req2Lib~\cite{9054865}& SANER & 2020 & \GH & Using the sequence to sequence technique, Req2Lib learns the library linked-usage information and semantic
+		information in natural language & The model is trained with common sequences used by several similar projects, being exposed to popularity bias  & \untick \\ \hline
+		
+		%		\rowcolor{lightgray}
+		\LS~\cite{9043686} & TSE & 2020 & Google Play, \GH, MVN & \LS uses matrix factorization, attempting to neutralize the bias caused by the popularity of TPLs by means of an adaptive weighting mechanism  & \emph{Due to its internal design, the system is expected to mitigate the effect of popularity bias} & \cellcolor{lightgray}\faCheck \\ \hline
+		%		\rowcolor{lightgray}
+		\GR~\cite{10.1145/3468264.3468552} & ESEC/FSE & 2021 & Google Play  & Built on top of graph neural networks, \GR learns to recommend TPLs through app-library interactions & Thanks to the underlying link prediction technique, \GR is supposed to recommend popular libraries   & \cellcolor{lightgray}\faCheck \\ \hline
+		%GELibRec~\cite{10.1007/978-3-031-00126-0_26}& DASFAA & 2022 & \GH & GELibRec employs graph neural networks and collaborative-filtering techniques, retrieving libraries from similar projects & This system is prone to popularity bias as it mines TPLs from projects using the collaborative-filtering mechanism & \untick  \\ \hline
+		%AndroLib~\cite{10.1007/978-3-030-64694-3_13} & ICSR  & 2022 & \GH  & A multi-objective combinatorial technique and the non-dominated sorting genetic algorithm (NSGA-II) are used to recommend relevant libraries   &  As AndroLib attempts to maximize libraries reuse from highly rated apps, it is expected to retrieve TPLs that are used by many developers & \untick \\ \hline
+	\end{tabular}
+	%\vspace{-.4cm}
+	\label{tab:summary}
+\end{table*}
+
+
+
+
+
+
+%\vspace{-.4cm}
+%\subsection{Adversarial machine learning in recommender systems} \label{sec:RelatedWorkAML}
+%
+%%Throughout this section, we consider 
+%\textbf{Adversarial machine learning.} %In a supervising learning task, 
+%%Given %classification — task. 
+%%a training dataset D with $n$ pairs of input sample and the corresponding label $(x, y)$ $\in$ X $\times$ Y, %where x is the input sample, and y is the corresponding class label, 
+%%classification is defined as seeking a candidate function that can predict the class label $y$ around the input sample $x$. This boils down to solving an empirical risk minimization (ERM) problem by means of the following equation \cite{10.1145/3336191.3371877}: $\underset{a}{min} \sum_{x,y\in D} l(f(x_{i},\theta ),y_{i})$, %
+%%%\begin{equation}
+%%%	\underset{a}{min} \sum_{x,y\in D} l(f(x_{i},\theta ),y_{i}) 
+%%%\end{equation}
+%%where $l(.)$ is the empirical risk function, or the loss function, $\theta$ is the model parameter. Adversarial attempts try to generate perturbed examples in the form of: $x_p$ = $x + \delta$,  by means of a non-random perturbation $\delta$, which leads to an erroneous prediction, \eg misclassification.
+%%In a similar fashion, attackers to RSSEs may try to craft the training data with their malicious examples, which once being recommended, can harm the target system. 
+%Attacks to recommender systems are classified into two main categories \cite{10.1145/3336191.3371877}: \emph{(i)} \emph{Poisoning attacks} spoil an ML model by falsifying the input data; and \emph{(ii)} \emph{Evasion attacks} attempt to avoid being detected by hiding malicious contents, which then will be classified as legitimate by ML models.
+%%\begin{itemize}
+%%	%	\noindent
+%%	\item[--] \emph{Poisoning attacks} spoil an ML model by falsifying the input data;
+%%	\item[--] \emph{Evasion attacks} attempt to avoid being detected by hiding malicious contents, which then will be classified as legitimate by ML models.
+%%\end{itemize}
+%With poisoning attacks, there are two possible interventions, \ie \emph{push attacks} and \emph{nuke attacks}. The former favor the targeted items, thus increasing the possibility of being recommended, while the latter try to downgrade/defame the targeted items \cite{10.1007/978-3-030-49461-2_18,4216981}, compelling them to disappear from the recommendation list.
+%
+%Existing studies tackle adversarial machine learning in general-purpose recommender systems~\cite{10.1007/s10462-012-9364-9,4216981}. Anelli \etal~\cite{10.1007/978-3-030-49461-2_18} introduced an attempt to use a shilling attack to manipulate a collaborative-filtering recommender system operated with linked data. However, no concrete countermeasure was developed to combat this type of attack. Deldjoo \etal~\cite{10.1145/3439729} presented a comprehensive survey on recent developments on AML for recommender systems. They also recalled various attacking and defense models for generic recommender systems. Such techniques could be possibly adapted to RSSEs that follow the same design methodology of generic recommender systems. %We consider this our future work.
+%
+%Cao \etal~\cite{cao_adversarial_2020} conceived a model  using reinforcement learning (RL) to enable recommender systems to detect attacks. The model is based on an attention classifier that tells apart adversarial examples and benign ones by measuring the probability that input data suffer from perturbations. % introduced using a constructed attack model. 
+%We suppose that this technique can be tailored to protect recommender systems for software engineering, as it learns from good samples, while being able to avoid malicious patterns.
+
+
+%
+
+%\begin{itemize}
+%	\item[--] \emph{Push attacks} favor the targeted items, thus increasing the possibility of being recommended;
+%	\item[--] In contrast, \emph{nuke attacks} try to downgrade/defame the targeted items \cite{10.1007/978-3-030-49461-2_18,4216981}, compelling them to disappear from the recommendation list. 
+%\end{itemize}
+\vspace{-.4cm}

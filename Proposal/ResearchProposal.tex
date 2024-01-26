@@ -1,0 +1,310 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% NIH Grant Proposal for the Specific Aims and Research Plan Sections
+% LaTeX Template
+% Version 1.0 (21/10/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Erick Tatro (erickttr@gmail.com) with modifications by:
+% Vel (vel@latextemplates.com)
+%
+% Adapted from:
+% J. Hrabe (http://www.magalien.com/public/nih_grants_in_latex.html)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt,notitlepage]{article}
+%\documentclass[article, 12pt]{article}
+% A note on fonts: As of 2013, NIH allows Georgia, Arial, Helvetica, and Palatino Linotype. LaTeX doesn't have Georgia or Arial built in; you can try to come up with your own solution if you wish to use those fonts. Here, Palatino & Helvetica are available, leave the font you want to use uncommented while commenting out the other one.
+\usepackage{palatino} % Palatino font
+%\usepackage{helvet} % Helvetica font
+
+
+
+\renewcommand*\familydefault{\sfdefault} % Use the sans serif version of the font
+%\usepackage[T1]{fontenc}
+\linespread{1.05} % A little extra line spread is better for the Palatino font
+
+
+\usepackage{tikz}
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+\usepackage{amsfonts, amsmath, amsthm, amssymb} % For math fonts, symbols and environments
+\usepackage{graphicx} % Required for including images
+\usepackage{booktabs} % Top and bottom rules for table
+\usepackage{wrapfig} % Allows in-line images
+\usepackage{multirow}
+\usepackage{hyperref}
+%\usepackage[utf8]{vietnam}
+
+\usepackage{color, colortbl}
+
+\usepackage{fontawesome} % for faCheck
+\usepackage{pifont}  %for uncheck, ding
+
+\usepackage{url}
+\usepackage[labelfont=bf]{caption} % Make figure numbering in captions bold
+\usepackage[top=0.5in,bottom=0.6in,left=1.0in,right=0.8in]{geometry} % Reduce the size of the margin
+\usepackage{xspace}
+\newcommand*{\ie}{i.e.,\@\xspace}
+\newcommand*{\eg}{e.g.,\@\xspace}
+\newcommand*{\cf}{cf.\@\xspace}
+\newcommand*{\RM}{README\@\xspace}
+\newcommand*{\GH}{GitHub\@\xspace}
+\newcommand*{\tool}{EvoPlan\@\xspace}
+\newcommand*{\CR}{CrossRec\@\xspace}
+\newcommand*{\LR}{LibRec\@\xspace}
+\newcommand*{\LS}{LibSeek\@\xspace}
+\newcommand*{\GR}{GRec\@\xspace}
+\newcommand*{\FC}{FOCUS\@\xspace}
+\newcommand*{\UM}{UP-Miner\@\xspace}
+
+\newcommand*{\etal}{\emph{et~al.}\@\xspace}
+\newcommand\revised[1]{\textcolor{black}{#1}}
+
+\newcommand\untick{\ding{54}}
+\newcommand\tick{\ding{52}}
+
+\newcommand*{\numPapers}{9,435\@\xspace}
+\newcommand*{\numSys}{four\@\xspace}
+\newcommand*{\numApps}{2,600\@\xspace}
+
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{\color{black} 
+		\node[shape=circle,draw=cyan,fill=black!10!white,inner sep=.3pt] (char) {{{\texttt\textbf #1}}};}}
+
+%\usepackage{geometry}\geometry{a4paper,total={170mm,257mm},left=20mm,top=20mm,}
+%\pagestyle{empty} % Remove page numbers
+
+%\title{Application of Linked Data to Mining Software Repositories}
+%\title{Statement of Research Interests}
+
+%\vspace{-.4cm}
+
+%\title{Research Proposal\\Beyond recommendations and cues: investigating possible synergies among RSSEs and low-code platforms  }
+%\title{A low-code platform with recommender systems and deep learning}
+%\title{Developing a low-code platform with recommender systems and deep learning}
+
+
+%\title{A Federated Learning Model for Shielding Adversarial Attacks in Intelligent Software Engineering}
+
+%\title{Fair and robust recommender systems for software engineering}
+
+%\title{Fair and Robust Recommender Systems for %Intelligent 
+%	Software Engineering}
+
+%\title{Fairness and Robustness for Recommender Systems in Software Engineering} 
+
+\title{Defusing Popularity Bias in Recommender Systems for Software Engineering} 
+\date{A research proposal submitted to Vietnam Institute for Advanced Study in Mathematics (VIASM) on December 30th, 2023}
+
+
+%: Recommender Systems for %Intelligent 
+%Software Engineering
+
+
+
+%\author{Phuong T. Nguyen}
+
+\author{\textbf{Dr. Phuong Nguyen}, Tenure-track Assistant Professor\\ Department of Information Engineering, Computer Science and Mathematics,\\ University of L'Aquila, Italy \\ Email: \href{mailto:phuong.nguyen@univaq.it}{phuong.nguyen@univaq.it} %Phone: (+39) 389 510 7723 
+	\\ Website: \url{https://www.disim.univaq.it/ThanhPhuong}}
+
+
+%\author{\textbf{Dr. Phuong Nguyen}\\ Universit\`a degli studi dell'Aquila, Italy \\Email: \href{mailto:phuong.nguyen@univaq.it}{phuong.nguyen@univaq.it} \\Website: \url{https://www.disim.univaq.it/ThanhPhuong} %\\
+%%\author{\textbf{Nguyễn Thanh Phương}\\ Universit\`a degli studi dell'Aquila, Italy %\\
+%%A research proposal submitted to the selection commitee for PhD study program Cycle XXXV.% academic year 2019--2020 %%, 
+%}
+
+%Linked Data for Knowledge Mining\\ from Open Source Software Repositories
+
+
+%\hyphenation{ionto-pho-re-tic iso-tro-pic fortran} % Specifies custom hyphenation points for words or words that shouldn't be hyphenated at all
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	SPECIFIC AIMS
+%----------------------------------------------------------------------------------------
+\maketitle
+
+\vspace{-.6cm}
+
+%\end{itemize}
+
+%\vspace{.05cm}
+%\noindent
+%$\rhd$~\emph{A review}: 
+%
+%\vspace{-.05cm}
+%\noindent
+%$\rhd$~\emph{Possible implications on the Software Engineering domain}: 
+
+%\vspace{.05cm}
+%The paper is structured as follows. Section \ref{sec:Background} provides  background notions about adversarial attacks and their effects on RSSE. Section \ref{sec:ProofOfConcept} reports an initial evaluation on two RSSE, 
+%while Section~\ref{sec:Conclusion} outlines future work and concludes the paper. 
+
+
+
+%Although DNNs have been widely exploited in various domains, to the best of my knowledge, 
+%is a class of machine learning algorithms that[10](pp199–200) use multiple layers to progressively extract higher level features from raw input
+%In recent years, the research community shows more and more interest in recommendation systems for software engineering (RSSE). A recommender system is a software application that is able to suggest valuable items considering the software engineering domain. In the literature, there are a huge number of approaches that face this problem, trying to bring novel contributions in this field. 
+%As this project is looking for possible matches between two quite different domains, this section wants to give the current state of the art of these mentioned areas. Concerning the recommendation systems, the definition given by Robillard et al. is currently accepted by the community. They define a recommender system as "a software application that provides information items estimated to be valuable given a software engineering context" \cite{DBLP:books/sp/rsse2014}. From the abstract point of view, there are four main components needed to perform an incisive recommendation activity: \textit{data preprocessing}, that involves techniques to extract valuable information from source data, \textit{capturing context}, in which the context is excerpted from the programming environment, \textit{producing recommendation}, that represents the core of the RSSE, and \textit{presenting recommendation}, that delivers the recommended items to the developer. 
+% that can bring some benefits, especially in the business domain
+%a user-friendly usage. provides a complete environment to allow one
+% and the accommodation of 
+%user-friendly utilities,
+
+%From 
+%On one side, t
+% the waste of time
+%, apart from couples of works like \cite{doi:10.1080/17517575.2018.1462403}
+
+%Low-code development (LCD) is a new emerging concept and it is a combination of various domains, \ie model-driven engineering, rapid application development. The aim of LCD is to speed up the development of a complete software application by means of recommendation technologies and development features. To this end, an LCD platform is a system that offers user-friendly graphical interfaces, drag and drop utilities, allowing users to build a software application from scratch. The concept has a heavy impact on the industrial domain as enterprises are continuously looking for new development strategies that reduce costs and increase efficiency. On the other hand, the topic remains still challenging as it has not been completely covered in academia. In this sense, my PhD study aims to develop a low-code platform, exploiting cutting-edge technologies, \ie~\emph{mining OSS repositories}, \emph{recommender systems}, and \emph{deep learning}. 
+
+%The plan is to build a conceptual bridge by integrating essential features of an RSSE a customized recommender system into a low-code platform to allow one to design, development, and maintenance of.
+
+%\vspace{-.3cm}
+
+%, a quite recent concept raising especially in the business domain
+%arises quite recently 
+%Considering the low-code
+%\section{Introduction}
+
+
+%\section{Research Experience}
+
+%CROSSMINER\footnote{\url{https://www.crossminer.org}} is a EU Horizon 2020 Research and Innovation Programme funded project, aiming to support the development of software systems by facilitating the adoption of existing open source software (OSS) components. 
+
+%I conducted my master thesis to develop the project's use cases. A summary of this work has been provided in a separate document attached to my PhD study application. Furthermore, in recent months I have been working to implement other use cases. We developed SR, a recommender system to assist developers in retrieving messages from StackOverflow relevant to the API function calls that they have already defined, as well as to the external libraries included in the project being developed. The approach has been validated by means of a user study involving 11 developers to evaluate 500 posts with respect to 50 contexts. Experimental results indicate the suitability of SR to recommend relevant StackOverflow posts and concurrently show that the tool outperforms a well-established baseline. The results of this work have been conveyed to an article which will be submitted to Journal of Systems and Software~\cite{RubeiJSS2019}. 
+
+%I've gained hands-on experience with Deep Learning through a recent research. We proposed a practical solution to fruit classification, exploiting two recently-developed deep neural networks, \ie~\EN and \MN as the classification engine. We also studied two different strategies for the learning process, namely randomization and transfer learning. The approach's performance has been evaluated on a fruit dataset with 48,905 images for training and 16,421 images for testing. The experimental results demonstrate that the application of \EN or \MN on the considered dataset considerably improves the overall performance, and thus achieving a better outcome compared to a convolutional neural network. Furthermore, we confirm that imposing transfer learning contributes towards an improvement in the prediction accuracy. We have written an article and plan to submit it to Journal of Computers and Electronics in Agriculture~\cite{DuongCAEA2019}. Through the work, I see the potential of applying DNNs to tackle various issues in Software Engineering.
+
+%Though fruit recognition is not directly related to , 
+
+%\vspace{-.3cm}
+
+%In this sense, our paper makes the following contributions:
+
+%Thanks to this characteristic, ML algorithms find their applications in various domains. A number of studies have been dedicated to apply ML techniques to solve different issues in the agriculture sector~\cite{KAMILARIS201870}. For fruit classification, various approaches have been proposed by applying deep learning techniques. 
+
+%. For example, they have been applied to improve Web search by learning from a user’s long-term search history~\cite{Sontag:2012:PMP:2124295.2124348}. For recommender systems, ML algorithms demonstrate their superiority by analyzing sentiment with ensemble techniques in social applications~\cite{ARAQUE2017236}, or allowing systems to learn from various profiles, thus boosting up the recommendation outcomes~\cite{PORTUGAL2018205}. Machine Learning algorithms are also indispensable to the controlling of self-driving cars~\cite{doi:10.1177/0306312717741687}. 
+%~\cite{pmlr-v97-tan19a}
+%~\cite{DBLP:journals/corr/abs-1907-09595}
+
+%\subsection{Postdoctoral Research}
+%
+%I spent one year as a postdoctoral researcher at the Laboratory of Information Systems, Polytechnic University of Bari, under the supervision of Prof. Dr. Eugenio Di Sciascio and Prof. Dr. Tommaso Di Noia\footnote{\url{http://sisinflab.poliba.it/}} with the focus on {\em "Semantic Similarity Measurement in Linked Data."} We analyzed the potential of using metrics for automatically measuring similarity when the data describing the content is available as Linked Data. First, we investigated the suitability of two similarity metrics, i.e. {\em SimRank} and {\em Personalized PageRank} for recommendation tasks \cite{Nguyen:2015:ESP:2740908.2742141}. Based on the structural context of an RDF graph, {\em SimRank} and {\em Personalized PageRank} were used to measure similarity in order to feed a content-based recommender system. To validate the outcomes, experimental evaluations on a Last.fm dataset have been performed to compare our recommendation results with those of some other standard content-based baseline. Various quality metrics were employed to analyze the results, e.g. precision, recall and catalog coverage, items distribution and novelty of results. Experimental results show that, in the given circumstances, the two metrics can produce interesting results compared to two baselines.%in terms of precision, recall an novelty even though their performance decrease when we evaluate catalog coverage, items distribution. 
+%%We implemented and tested the performance of some notable semantic similarity metrics for RDF graph. 
+%
+%In another research, we examined the suitability of two encyclopedic data sources namely DBpedia\footnote{\url{http://dbpedia.org}} and Freebase\footnote{\url{http://www.freebase.com/}} for musical artists recommendation tasks \cite{Nguyen:2015:CRV:2942298.2942305}. We proposed a solution to evaluate the fitness for use of the sources to feed a pure content-based recommender system. As the input for the calculation we exploit similarity values computed by four feature-based semantic similarity metrics. The values are used to find similarities between items and eventually to produce the final recommendation list. Our experimental evaluations are conducted in line with the well-known dataset Last.fm for musical artists recommendation. To analyze the fitness for use of the data sources to recommendation tasks, we consider the following {\em quality dimensions}: {\em Accuracy}, {\em Sales Diversity}, and {\em Novelty}. For most of the experimental settings, we saw that employing Freebase obtains better accuracy and catalog coverage. Whereas, the dataset from DBpedia generally fosters the novelty of recommendations. Concerning the distribution, at first glance using the DBpedia dataset appears to outperform, but a detailed analysis shows that the results are somehow comparable. For all settings, the selection of both inbound and outbound links for computing similarity makes a difference to the overall performance. We confirm that encyclopedic Linked Data datasets are an interesting source of data to build content-based recommender systems. However the choice of the right dataset might affect the performance of the system with regards to some evaluation dimensions such as accuracy, novelty and diversity of results.  
+% %Various quality metrics are employed to analyze the recommendations with respect to these features. 
+
+
+
+
+%It leads, of course, some challenges to be addressed, starting from how to solve possible conflicts among the components, give strong support to the user experience, and avoid to create a too general-purpose platform.  
+%\section{Project synopsis}
+%After these considerations, t
+%The next section points out all these challenges and gives also a possible ideal solution for each of them. 
+%My research aims at realizing a low-code platform that is able to implement at least the mentioned essential components of an RSSE. 
+%The platform could also embed recent rising techniques and approaches, such as machine learning, neural networks, and IFTTT protocol to bring additional novelty in the highlighted research field.
+
+
+
+%==============================
+%==============================
+%https://www.sony.com/en/SonyInfo/research-award-program/#SubmissionGuidelines
+
+%Proposal Format
+%Please include the required items listed below in your submission:
+%
+%Title, abstract, methods, goals/milestones, references, and either one Focused Research Theme (if for the Focused Research Award) or one primary keyword (if for the Faculty Innovation Award).
+%Please describe your submission's differentiation from the current state-of-the-art.
+%Please include the best contact email address and phone number (complete with country code) for the PI.
+%All proposal contents must fit within 11 pages (a ten-page maximum proposal with references and a one-page budget summary). The file format must be a PDF or a MS Word file format and must be under 16 MB in size. Out of consideration to reviewers, please limit your minimum font size to a 10 point font.
+%==============================
+%==============================
+%https://www.sony.com/en/SonyInfo/research-award-program/?path=\%2Fresearch-award-program\#FacultyInnovationAward
+
+%``\emph{}''
+
+
+%In response to VIASM's call for proposals,\footnote{\url{https://bit.ly/3v67YQA}} I am excited to present my research proposal focused on the vital aspects of fairness within recommender systems for software engineering (RSSEs).
+
+ %I am going to present my research proposal on the topic of fairness and robustness for recommender systems for software engineering (RSSEs). 
+%The core objective of this proposal is to develop effective techniques to improve %address two key challenges: \emph{(i)} improving 
+%fairness in RSSEs. %and \emph{(ii)} fortifying RSSEs against adversarial attacks. 
+%Notably, these topics match well %properly %seamlessly 
+%with Sony's stated interests in ``\emph{\textbf{Explainable AI/Fairness/AI Ethics}}'' under the realm of ``\emph{\textbf{Machine Learning}}.'' 
+This proposal represents an opportunity to contribute to the advancement of Machine Learning in Software Engineering, and aligns with the commitments to innovative research in the field of ethics and fairness for Artificial Intelligence (AI) systems. If my proposal gets funded, I will be able to promote and strengthen collaborations with different research groups in Hanoi. %would it pave the way for the collaboration with School of Information and Communications Technology (SOICT). %research 
+%team at the University of L'Aquila. 
+%Being Principal Investigator (PI), 
+We will be working diligently to advance ongoing research efforts, and propose practical solutions that address unresolved issues in the field of Machine Learning for Software Engineering. 
+
+%The proposal is structured as follows. 
+\textbf{Structure.} Section~\ref{sec:Introduction} gives an introduction to our work. The related literature is reviewed in Section~\ref{sec:RelatedWork}, and our current research related to the topic under consideration is recalled in Section~\ref{sec:CurrentResults}. An overview of the proposed methodology is given in Section~\ref{sec:Methodology}. Afterwards, Section~\ref{sec:Results} sketches the expected results, including the prospective publications. Finally, Section~\ref{sec:PreviousStay} reports the results obtained through my previous research stay funded by VIASM.
+
+ %A tentative plan for the budget, together with the research activities are in Section~\ref{sec:Plans}.  
+
+%\vspace{-.4cm}
+
+
+%================================
+%Following the calls %for proposals 
+%from Sony,\footnote{\url{https://www.sony.com/en/SonyInfo/research-award-program/}} in this document, I am going to present my research proposal on the topic of fairness and robustness for recommender systems for software engineering (RSSEs). The ultimate aim is to conceive suitable techniques to deal with two main issues, \ie \emph{(i)} popularity bias; and \emph{(ii)} adversarial attacks to these systems. This topic falls into the following set of keywords solicited by Sony: ``\emph{\textbf{Explainable AI/Fairness/AI Ethics}}'' in ``\emph{\textbf{Machine Learning}}.'' 
+%If %Given that 
+%the proposal gets funded, I will have the opportunity to form a dedicated team at the University of L'Aquila to deepen the current research, proposing practical solutions to tackle unsolved problems in Machine Learning for Software Engineering. The proposal is structured as follows. Section~\ref{sec:Introduction} introduces the main goals of the research. The related work is reviewed in Section~\ref{sec:RelatedWork}. We recall our current research related to the topic being under consideration in Section~\ref{sec:CurrentResults}. An overview of the proposed approach is given in Section~\ref{sec:Overview}. Afterwards, Section~\ref{sec:Results} sketches the expected results, including the prospective publications. Finally, a tentative plan for the budget, together with the research activities are presented in Section~\ref{sec:Plans}.  
+
+%================================
+%Section~\ref{sec:Introduction} presents a brief overview to the research problem. Afterwards, in Section~\ref{sec:Objectives}, I am going to sketch the main objectives of my study.% stay at VIASM.
+%This research proposal presents an overview of adversarial machine learning and possible implications on recommender systems for software engineering. It also draws some prospective work for a one-year research period funded by the Sony Faculty Innovation Award. %research stay at VIASM. 
+%As a proof of concept, we show the extent to which the presence of manipulated data can have a negative impact on the outcomes of two state-of-the-art recommender systems which suggest third-party libraries to developers. Our work aims at raising awareness of adversarial techniques and their effects on the Software Engineering community. We also propose equipping recommender systems with the capability to learn to dodge adversarial activities.
+%================================
+
+
+\section{Introduction}
+\label{sec:Introduction}
+\input{src/Introduction}
+
+\section{Related Work}
+\label{sec:RelatedWork}
+\input{src/RelatedWork}
+
+\section{Our obtained results}
+\label{sec:CurrentResults}
+\input{src/CurrentResults}
+
+\section{Methodology}
+\label{sec:Methodology}
+\input{src/Methodology}
+
+\section{Expected results and plans}
+\label{sec:Results}
+\input{src/Results}
+
+
+\section{Report on the previous stay funded by VIASM}
+\label{sec:PreviousStay}
+\input{src/PreviousStay}
+
+%\section{Plans}
+%\label{sec:Plans}
+%\input{src/Plans}
+
+
+%``''
+%\vspace{-.4cm}
+
+\bibliography{ResearchProposal} % Use the NIHGrant.bib file for the reference list
+\bibliographystyle{IEEEtranS}
+%\bibliographystyle{unsrt} % Use the custom nihunsrt bibliography style included with the template
+
+%----------------------------------------------------------------------------------------
+\end{document}

@@ -1,0 +1,237 @@
+
+
+When building new software, developers usually have to deal with %a large number of information sources. In such a context, the problem is not the lack but instead 
+an overload of information %coming 
+from heterogeneous and rapidly evolving open sources. %The proliferation of open source repositories in recent years necessitates suitable toolings to mine the rich data sources~\cite{DBLP:journals/ese/RoccoRSNR21}. %When dealing with a growing information overload when discerning alternative development solutions. 
+Recommender systems for software engineering (RSSEs)~\cite{DBLP:books/sp/rsse2014} serve as an effective means %have been developed % assist software engineers in Thus, recommender systems in software engineering
+to provide developers with instant support %recommendations 
+consisting of different items, \eg code examples~\cite{Fowkes:2016:PPA:2950290.2950319,Nguyen:2019:FRS:3339505.3339636}, possible third-party components~\cite{NGUYEN2019110460,Ouni:2017:SSL:3032135.3032325,6671293}, documentation, to name a few. Nevertheless, while the main effort has been spent to make RSSEs more effective and efficient, there are several issues related to fairness and robustness that have not attracted enough attention from the research community, as shown below.
+
+
+%the research community.
+%state-of-the-art re
+%Recommender systems in software engineering (RSSEs)~\cite{DBLP:books/sp/rsse2014} %have been conceptualized on a comparable basis, i.e., they
+%have been conceived to assist developers in getting instant recommendations that are helpful to solve a particular development task. 
+%By mining these data, numerous approaches based on DL have been proposed to introduce recommender systems to support developers in different downstream tasks \cite{Chen2020,DeepRelease2022, itiger2022, Moreno2017}.
+%RSSEs provide a wide range of useful items to assist developers in completing their programming tasks. %While research has been conducted to improve recommendation accuracy, little attention has been paid to make such systems robust and resilient to malicious data. 
+
+
+%In online shopping market, recommender systems have been conceived to enable customers to approach %items or 
+%goods %being 
+%that suite their needs~\cite{DBLP:books/sp/Aggarwal16,DBLP:reference/rsh/2011}. %are an effective means to cope with the proliferation of various data sources~\cite{di_rocco_development_2021,DBLP:books/sp/rsse2014}.
+
+%Nonetheless, while being able to provide accurate results, these systems tend to present frequently seen items~\cite{DBLP:conf/flairs/AbdollahpouriBM19,DBLP:conf/recsys/AbdollahpouriMB19,10.1145/3564284}, %. In other words,
+%\ie . %in recommender systems~\cite{DBLP:journals/ir/BelloginCC17}.
+%========================
+%This paper studies popularity bias in Third-Party Library (TPL) RSSEs. First, we investigate whether state-of-the-art research in RSSEs has already tackled the issue of popularity bias. Then, we quantitatively assess \numSys existing TPL RSSEs, exploring their capability to deal with the recommendation of popular items. Finally, we propose a mechanism to defuse popularity bias in the recommendation list. The empirical study reveals that the issue of dealing with popularity in TPL RSSEs has not received adequate attention from the software engineering community. Among the surveyed work, only one starts investigating the issue, albeit getting a low prediction performance.
+%========================
+
+%Moreover, while RSSEs are becoming more and more effective in suggesting handy recommendations, they tend to suffer from popularity bias, \ie favoring items that are relevant mainly because several developers are using them. While this rewards artifacts that  are likely more reliable and well-documented, it would also mean that missing artifacts are rarely used because they are very specific or more recent.
+
+
+
+
+
+%=================================Popularity bias in RSSEs=================================
+%Such systems can provide a wide range of items, including third-party libraries (TPLs), API function calls, code snippets, or relevant Stack Overflow posts. 
+
+% are preferably provided to users. 
+%\textbf{Popularity bias.} 
+Recommender systems are among the most widespread applications of machine learning, playing a significant role in assisting human decision-making processes. The quality of the recommendations %they generate 
+is closely linked to user satisfaction and the interests of the platforms. However, being heavily reliant on data and algorithms, recommender systems can be susceptible to biases that may lead to unfair outcomes, potentially jeoparadizing trust in them. %Consequently, it is imperative to address fairness issues in recommendation scenarios. 
+For recommender systems, %the ability to fetch rare but useful items %rarely %seen but useful %, \ie in the \emph{long tail} 
+%is deemed to be a desirable feature~\cite{10.1145/1454008.1454012}. %In recommendation, %4688070
+the \emph{long tail effect} indicates that a handful of items are extremely popular, whilst most of the remaining ones, so-called the long tail, are not seen by users \cite{Anderson:2006:LTW:1197299}. Essentially, products belonging to the long tail are considered a social good~\cite{DBLP:conf/recsys/AbdollahpouriMB19} and recommending rare but useful items benefits both customers and shop owners \cite{Vargas_sales_diversity_14}. 
+\emph{Popularity bias} is a common phenomenon of general purpose recommender systems~\cite{DBLP:conf/flairs/AbdollahpouriBM19,DBLP:conf/recsys/AbdollahpouriMB19,10.1145/3564284}, \ie providing to users only frequently seen items. Likewise, RSSEs are no exception, while they become more effective in suggesting handy recommendations, RSSEs also suffer from popularity bias by presenting artifacts %that have been 
+used by several developers~\cite{10174041}. While this favors artifacts that are possibly more reliable and well-maintained, it would essentially mean that systems fail to recommend some relevant goals, architecture- or solution-specific artifacts. %
+%several artifacts are rarely recommended because they are very specific or more recent. %In fact, recommending artifacts in the long tail has been deemed a desired feature of any recommender systems~\cite{10.1145/1454008.1454012}. 
+%Thus, popularity bias can be considered as an issue that needs to be tackled.
+
+
+
+%As found for \CR, state-of-the-art TPL RSSEs may not properly leverage peculiar aspects of a project, \eg related to implementation solutions. Hence, they fail to recommend some relevant goals, architecture- or solution-specific libraries.
+
+
+%=================================Adversarial attacks to RSSEs=================================
+%\textbf{Adversarial attacks.} Adversarial Machine Learning~\cite{10.1007/978-3-030-49461-2_18,6015575} (AML) is a field of study that focuses on security issues in machine learning systems, as well as in general-purpose recommender systems~\cite{10.1145/3336191.3371877}. To train RSSEs, \GH is a precious source containing heterogeneous materials related to various aspects in software development. %This means, for example, that 
+%%The recommendation of code elements, \eg snippets or APIs, is learned from existing code bases or informal documentation. 
+%%In this respect, the provided recommendations are highly dependent on the quality of the training data. 
+%Nevertheless, open source platforms are not exempt from noise, or even worse, malicious data~\cite{KalliamvakouGBSGD14}, and thus they can be exploited by users with pretty ill intent. %By spoiling the training set, \ie large open source software (OSS) repositories, 
+%In other words, these systems are vulnerable to attacks equipped with forged input data. An adversary may render RSSEs prone to vulnerabilities %. In particular, they 
+%by injecting perturbations, %to %deceive and disrupt systems, 
+%compromising their recommendation abilities. This was empirically 
+%confirmed in our two recent studies~\cite{10.1145/3463274.3463809,9678946}, in which we showed that a series of recommender systems for providing third-party libraries and APIs are open to adversarial attacks. Even with a small amount of manipulated data, all the considered systems are affected, recommending dangerous libraries and APIs to developers. %, putting the receiving systems at risks.
+
+
+%
+%=============================================
+%RSSEs heavily rely on open data sources, such as \GH, the Maven Central Repository, or Stack Overflow, which can be easily steered by adversaries \cite{zhang_cyber-guided_2020}. 
+%The development of RSSEs encompasses several phases including the design of the underpinning algorithms or the reuse of existing ones. Machine Learning (ML) techniques are amongst the natural choices that developers take when new recommender systems have to be conceived. 
+%Considering data used to train these models, 
+%, whose noisiness has been previously reported
+%For example, Anelli \etal~\cite{10.1007/978-3-030-49461-2_18} used shilling attack %~\cite{DBLP:journals/air/SiL20} 
+%to manipulate a collaborative-filtering recommender system operated with Linked Data. Also, Wang and Han \cite{wang_adversarial_2020} proposed an improvement of the Bayesian personalized ranking (BPR) technique by exploiting the adversarial training-based mean strategy (AT-MBPR) in the domain of collaborative filtering-based recommender systems.
+%=============================================
+
+
+
+
+%Adversarial Machine Learning~\cite{6015575} (AML) is a field of study that focuses on security issues in machine learning systems, as well as in general-purpose recommender systems~\cite{10.1145/3336191.3371877}. 
+
+%=================================Research gap=================================
+
+\textbf{Research gap.} %Our ongoing research~\cite{9678946,10174041,10.1145/3463274.3463809} %(summarized in Section~\ref{sec:CurrentResults}) 
+%has shown 
+Through systematic literature reviews, we carefully investigated state-of-the-art studies published in several software engineering venues. We found out that while recommender systems have become more effective at suggesting relevant items, they are prone to popularity bias~\cite{10174041}. %and adversarial attacks~\cite{10.1145/3463274.3463809,9678946}. %Our study suggests that while the research community either underestimates or ignores it, the possibility of using falsified data to trick RSSE \emph{is always present}, leaving a potential danger to software systems. 
+In particular, we realized that dealing with popularity bias in TPL recommender systems has not gained traction from the software engineering community. Among the considered studies, only one approach tries to improve diversity in the recommendation results, nevertheless it suffers from a low prediction accuracy. Moreover, while AML has been well studied in other domains, \eg online shopping systems~\cite{10.1145/3336191.3371877,10.1007/s10462-012-9364-9}, or computer vision~\cite{conf/cvpr/NguyenYC15}, there exists no work discussing adversarial attempts to RSSEs. In fact, the majority of existing studies %the research %related to RSSEs 
+attempt to improve the prediction accuracy, and no effort has been spent to tackle popularity bias~\cite{10174041}. %, %study the problem of using 
+%as well as to deal with the abuse of intentionally manipulated data to compromise recommender systems~\cite{9678946,10.1145/3463274.3463809}. So far, there are no concrete countermeasures that can be instantly deployed to defend RSSEs against attacks. 
+%, as well as to . %, as well as conceiving counteractions. %
+%While the Software Engineering community either underestimates or ignores it, the possibility of using falsified data to trick RSSE is always present, leaving a potential danger to software systems.
+In this respect, we see an urgent need to thoroughly study the related issues, %likely threats, 
+with the ultimate aim of \emph{devising effective mechanisms to improve the fairness and robustness of RSSEs}. 
+
+
+
+
+
+%\textbf{Our contributions.} Let us suppose that the proposal will get funded by Sony, then we will be organizing a dedicated team at the University of L'Aquila to focus on addressing the pertinent issues. To be concrete, we will perform research to identify probable threats, and seek out adequate countermeasures~\cite{10.1007/978-3-030-49461-2_18}. The ultimate aim is to equip RSSEs with the ability to deal with popularity bias and adversarial attacks, while still preserving, or even better, improving accuracy. To this end, \emph{our work distinguishes itself from state-of-the-art research in the following aspects}:
+%
+%\begin{itemize}
+%	\item We are the first to raise the issue of popularity bias, and adversarial attacks to RSSEs.
+%	\item We will propose a holistic approach to make RSSEs fair and attack-proof, employing and tailoring reinforcement learning, and adversarial training for this purpose. 
+%%	 tackling popularity bias and adversarial attacks to RSSEs.
+%	\item The conceived techniques can be applied to fine tune pre-trained deep learning models in Software Engineering.%applied in real-world recommender systems. %will be used to tackle unsolved issues in Software Engineering.
+%\end{itemize}
+
+
+\textbf{Expected contributions.} If the proposal is funded by %securing funding from 
+VIASM, %my envisioned contributions entail the establishment of a %dedicated 
+I will %collaborate with my colleagues at the School of Information and Communications Technology (SOICT), Hanoi University of Science and Technology (HUST),
+%research team at the University of L'Aquila, 
+%specifically focused on addressing crucial challenges within the domain. We 
+invest efforts to conduct %comprehensive 
+research to identify potential threats and devise effective countermeasures~\cite{10.1007/978-3-030-49461-2_18}. The ultimate goal is to empower RSSEs %Recommender Systems for Software Engineering (RSSEs) 
+with the capability to effectively deal with popularity bias, while maintaining or even enhancing their accuracy.
+
+My work is expected to have the following contributions: %stands out from existing research in the following key aspects: % key ways:
+
+\begin{itemize}
+
+	\item \underline{Pioneering exploration.} We take the initiative to bring attention to the previously overlooked issues of popularity bias affecting RSSEs. This represents a pioneering effort in the field.
+
+	\item \underline{Holistic approach.} We propose a holistic and integrated approach to fortify RSSEs, leveraging tailored reinforcement learning. This comprehensive strategy is designed to enhance their fairness. %and resilience.
+
+	\item \underline{Applicability.} The techniques we develop are not limited to RSSEs only, they can be readily applied to fine-tune pre-trained deep learning models in the broader context of software engineering, contributing to the advancement of AI-driven solutions in the field.
+
+\end{itemize}
+
+%With our contributions, 
+%We aim to advance the state of knowledge in software engineering and AI ethics while offering practical solutions that can have a significant impact on the industry, research community, and society at large.
+
+\vspace{-.4cm}
+
+
+%===============================================================
+
+%While the topic of AML has been studied in different domains, there is no work dealing with adversarial attacks to RSSEs. % (see Section~\ref{sec:RQ1}). 
+%Also, there exist no concrete countermeasures that can be instantly applied to protect RSSE against attacks. 
+
+%We consider this as part of our future research agenda. Based on a thorough observation, %on the existing related work, 
+
+%little attention has been paid to make them robust and resilient to adversarial attempts concealed in training data. First, through literature analysis, we realized that no studies have been conducted to investigate the abuse of deliberately forged data to spoil API recommenders' outcomes and conceive suitable counteractions. 
+%An investigation into the working mechanism of existing API/code snippet recommender systems reveals their vulnerability to hostile attempts. Then, an empirical evaluation on three state-of-the-art API/code snippet recommenders further confirms our conjecture: all of them are exposed to malicious data, paving the way for unscrupulous exploitation.  
+
+%Altogether, our work is novel as it is the first one to study threats that cause harm to RSSE providing API calls and code snippets, as well as to experiment on real API recommender systems to perturb their recommendation capability.
+%===============================================================
+%finding suitable techniques for building %address the related issues 
+%fair and robust recommender systems for Software Engineering. 
+%In this respect, %working to achieve the following main objectives.
+%===============================================================
+%Less prone to adversarial attacks. Recommender systems are prone to adversarial attacks and bias, among other issues. 
+%\begin{itemize}
+%	\item RSSEs are subject to bias.
+%	\item abc.
+%	\item abc.
+%\end{itemize}
+
+%===============================================================
+%In this respect, . State-of-the-art research, while obtaining promising accuracy, they seem to neglect these aspects, and thus we see room for improvement. 
+
+  
+%Therefore, there is the need for comprehending the likely threats, with the ultimate aim of conceiving counteractions to increase the safeness of RSSE. 
+
+
+%In this respect, we see an urgent need to thoroughly perceive the likely threats to conceptualize effective defense mechanisms, thus increasing the resilience and robustness of RSSE. We consider this as part of our future research agenda.
+%In out recent studies, we found out that RSSEs are subject to bias, and adversarial attacks.
+
+% [27],[28]. 
+%While research has been conducted on the underpinning ML techniques to improve recommendation accuracy, little attention has been paid to make such systems robust and resilient to malicious data. Given the circumstances, there is an urgent need to explore AML in the context of Software Engineering, with the aim of conceiving mechanisms to protect recommender systems from malicious intents disguised in training data. 
+
+
+%In recent years, there is a dramatic increase in the application of Machine Learning (ML) algorithms in several domains, including the development of recommender systems for software engineering (RSSE). 
+%I plan to work on this topic, finding suitable mechanisms to detect adversarial attacks, as well as proposing suitable countermeasures. 
+
+%By manipulating the algorithms' training set, \ie large open source software (OSS) repositories, one could possibly make recommender systems vulnerable to adversarial attacks. This section gives an introduction to the topic being addressed %as well as introduces the research problem 
+%during my research stay.
+
+%AML has been studied in a wide range of domains, \eg online shopping systems~\cite{4216981} or image classification~\cite{conf/cvpr/NguyenYC15}, and addresses both risks and countermeasures. However, to the best of my knowledge, AML has not been investigated in the context of SE applications of ML yet.
+%Leveraging deep learning has become one of the most preferable solutions to tackle many software engineering tasks \cite{DL_in_software,DBLP:books/sp/rsse2014}. 
+%Such systems can provide a wide range of items, including third-party libraries (TPLs), API function calls, code snippets, or relevant Stack Overflow posts. 
+%Recommender systems in software engineering (RSSE) provide information items estimated to be valuable for a software engineering task in a given context~\cite{DBLP:books/sp/rsse2014}. 
+%In recent years, 
+%In Software Engineering, many recommender systems have been developed with the use of several state-of-the-art DL architectures, aiming to intensify developers' performance \cite{api_recommendation2021, itiger2022, Chen2020}. 
+%I believe that we can further empower RSSE with deep learning techniques, allowing them to provide more precise/relevant suggestions to developers while they are programming.
+
+
+
+
+
+
+%
+%Suitable Federated learning algorithms for the Software Engineering domain.
+%Few-shot learning, Zero-shot learning.
+%privacy preserving systems. 
+%
+%software engineering recommender systems. 
+
+%\subsection{Introduction} \label{sec:Introduction}
+
+%In recent years, we have witnessed a dramatic increase in the application of Machine Learning algorithms in several domains, including the development of RSSE. While researchers focused on the underpinning ML techniques to improve recommendation accuracy, little attention has been paid to make such systems robust and resilient to malicious data. By manipulating the algorithms' training set, \ie large open source software (OSS) repositories, it would be possible to make  recommender systems vulnerable to adversarial attacks.
+
+%This paper presents an initial investigation of adversarial machine learning and its possible implications on RSSE. 
+%As a proof of concept, we show the extent to which the presence of manipulated data can have a negative impact on the outcomes of two state-of-the-art recommender systems which suggest third-party libraries to developers. Our work aims at raising awareness of adversarial techniques and their effects on the Software Engineering community. We also propose equipping recommender systems with the capability to learn to dodge adversarial activities.
+%Machine Learning (ML) algorithms attempt to simulate humans' learning activities, aiming to acquire real-world knowledge autonomously. In this way, ML systems are capable of generalizing from concrete examples, without needing to be manually coded. The proliferation of Deep Learning techniques in recent years has enabled a numerous number of applications in a wide range of domains. Deep neural networks (DNNs) consist of several processing layers and they learn representations of data with multiple levels of abstraction. Despite the high potential, the application of such algorithms in Software Engineering has gained a moderate growth lately.
+
+%To cope with their everyday programming tasks,  developers access and browse
+%various information sources \cite{Dagenais:2010:MNS:1806799.1806842}. %, often in a short time \cite{Dagenais:2010:MNS:1806799.1806842}. 
+%Given the wide availability of sources of formal and informal documentation,
+%%In such a context, 
+%the problem is not a lack but instead, information overload \cite{Murphy09,Murphy-HillMG10}. Recently, many studies have been conducted to develop methods and tools --- recommender systems for software engineers (RSSE) --- to provide developers with automated assistance~\cite{Gu2016DeepAPI,DBLP:journals/ese/PonzanelliBPOL16,NGUYEN2019110460}. %\MAX{cite here the most relevant ones from our table}
+
+
+
+
+
+
+
+
+
+
+
+
+%,10.1145/2046684.2046692
+%,wang_adversarial_2020
+%f_{\theta} : X \rightarrow Y 
+
+
+
+% to protect systems against attacks
+%Adversarial Machine Learning (AML) is an emerging research topic that is a combination of the best practices in various fields, including Machine Learning, robust statistics, and computer security~\cite{DDM20a,10.1145/2046684.2046692}. %[115, 134] %Tommaso Di Noia. %Adversarial machine learning 
+
+
+
+
+
+
+%Federated learning:

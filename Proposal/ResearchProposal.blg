@@ -1,0 +1,66 @@
+This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: ResearchProposal.aux
+The style file: IEEEtranS.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: ResearchProposal.bib
+Repeated entry---line 988 of file ResearchProposal.bib
+ : @article{NGUYEN2019110460
+ :                          ,
+I'm skipping whatever remains of this entry
+A bad cross reference---entry "conf/cvpr/NguyenYC15"
+refers to entry "conf/cvpr/2015", which doesn't exist
+Warning--I didn't find a database entry for "10.1145/170035.170072"
+Warning--I didn't find a database entry for "conf/cvpr/2015"
+-- IEEEtranS.bst version 1.14 (2015/08/26) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+** Sorting version - not for normal IEEE work.
+
+Done.
+You've used 37 entries,
+            4566 wiz_defined-function locations,
+            1184 strings with 18219 characters,
+and the built_in function-call counts, 37200 in all, are:
+= -- 3334
+> -- 1121
+< -- 205
++ -- 569
+- -- 295
+* -- 2070
+:= -- 5553
+add.period$ -- 89
+call.type$ -- 37
+change.case$ -- 258
+chr.to.int$ -- 465
+cite$ -- 37
+duplicate$ -- 2371
+empty$ -- 2731
+format.name$ -- 332
+if$ -- 8493
+int.to.chr$ -- 0
+int.to.str$ -- 37
+missing$ -- 419
+newline$ -- 184
+num.names$ -- 78
+pop$ -- 1145
+preamble$ -- 1
+purify$ -- 218
+quote$ -- 2
+skip$ -- 2750
+stack$ -- 0
+substring$ -- 1455
+swap$ -- 1852
+text.length$ -- 50
+text.prefix$ -- 0
+top$ -- 6
+type$ -- 389
+warning$ -- 0
+while$ -- 162
+width$ -- 39
+write$ -- 453
+(There were 2 error messages)
