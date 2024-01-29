@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.6.1)  30 DEC 2023 05:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.6.1)  29 JAN 2024 18:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -808,165 +808,64 @@ LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 1
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
+Overfull \hbox (42.22768pt too wide) in paragraph at lines 136--136
+ [][] 
+ []
+
 (./src/Introduction.tex
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 44.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 45.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Trying to load font information for TS1+phv on input line 1
-21.
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 7
+4.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1phv.fd
 File: ts1phv.fd 2001/06/04 scalable font definitions for TS1/phv.
-))
-(./src/RelatedWork.tex
-Overfull \hbox (3.2349pt too wide) in paragraph at lines 63--63
-[]|\OT1/phv/b/n/7 Year| 
- []
-
-
-Overfull \hbox (5.45209pt too wide) in paragraph at lines 63--63
-[]|\OT1/phv/b/n/7 Avail.| 
- []
-
-
-Overfull \hbox (4.18689pt too wide) in paragraph at lines 67--67
-[]|\OT1/phv/m/n/7 2013| 
- []
-
-
-Underfull \hbox (badness 6047) in paragraph at lines 67--67
-[]|\OT1/phv/m/n/7 LibRec is built on top of a light
- []
-
-
-LaTeX Warning: Citation `10.1145/170035.170072' on page 2 undefined on input li
-ne 67.
-
-LaTeX Font Info:    Trying to load font information for U+fontawesometwo on inp
-ut line 67.
-(/usr/share/texlive/texmf-dist/tex/latex/fontawesome/ufontawesometwo.fd
-File: ufontawesometwo.fd 2016/05/22 Font definitions for U/fontawesometwo.
 )
-Overfull \hbox (4.18689pt too wide) in paragraph at lines 68--68
-[]|\OT1/phv/m/n/7 2017| 
- []
-
-
-Overfull \hbox (2.50172pt too wide) in paragraph at lines 70--70
-[]|\OT1/phv/m/n/7 LibFinder [[]]| 
- []
-
-
-Overfull \hbox (4.18689pt too wide) in paragraph at lines 70--70
-[]|\OT1/phv/m/n/7 2018| 
- []
-
-
-Overfull \hbox (4.04887pt too wide) in paragraph at lines 75--75
-[]|\OT1/phv/m/n/7 CrossRec [[]]| 
- []
-
-
-Overfull \hbox (4.18689pt too wide) in paragraph at lines 75--75
-[]|\OT1/phv/m/n/7 2020| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 75--75
-[]|\OT1/phv/m/n/7 CrossRec em-ploys a collaborative-
- []
-
-
-Overfull \hbox (4.18689pt too wide) in paragraph at lines 76--76
-[]|\OT1/phv/m/n/7 2020| 
- []
-
-
-Overfull \hbox (4.18689pt too wide) in paragraph at lines 80--80
-[]|\OT1/phv/m/n/7 2020| 
- []
-
-
-Underfull \hbox (badness 2762) in paragraph at lines 80--80
-[]|\OT1/phv/m/n/7 Google Play,
- []
-
-LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <7> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 80.
-
-Overfull \hbox (3.32341pt too wide) in paragraph at lines 82--82
-[]|\OT1/phv/m/n/7 ESEC/FSE| 
- []
-
-
-Overfull \hbox (4.18689pt too wide) in paragraph at lines 82--82
-[]|\OT1/phv/m/n/7 2021| 
- []
-
-
-Underfull \hbox (badness 6032) in paragraph at lines 82--82
-[]|\OT1/phv/m/n/7 Built on top of graph neu-ral net-
- []
-
-) (./src/CurrentResults.tex [2]
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <9> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 82.
-) (./src/Methodology.tex [3]
-<figs/SystemArchitecture.pdf, id=175, 794.97pt x 261.97874pt>
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 74.
+)
+(./src/Methodology.tex
+<figs/SystemArchitecture.pdf, id=84, 794.97pt x 261.97874pt>
 File: figs/SystemArchitecture.pdf Graphic file (type pdf)
 <use figs/SystemArchitecture.pdf>
-Package pdftex.def Info: figs/SystemArchitecture.pdf  used on input line 73.
+Package pdftex.def Info: figs/SystemArchitecture.pdf  used on input line 74.
 (pdftex.def)             Requested size: 290.52823pt x 95.74336pt.
-) (./src/Results.tex [4 <./figs/SystemArchitecture.pdf>] [5]) (./src/PreviousSt
-ay.tex
-Overfull \hbox (7.68663pt too wide) in paragraph at lines 13--14
-\OT1/phv/m/n/10 fer-ence on Eval-u-a-tion and As-sess-ment in Soft-ware En-gi-n
-eer-ing 2023 (EASE 2023), DOI: []https://doi.org/10-
+ [2 <./figs/SystemArchitecture.pdf>]) (./src/Results.tex
+[3]
+Overfull \hbox (3.30542pt too wide) in paragraph at lines 176--176
+[]|\OT1/phv/m/n/7 Reading| 
  []
 
-
-Overfull \hbox (10.21655pt too wide) in paragraph at lines 21--23
-\OT1/phv/m/n/10 ence on Eval-u-a-tion and As-sess-ment in Soft-ware En-gi-neer-
-ing 2023 (EASE 2023), DOI: []https://doi.org/10.11-
- []
-
-) (./ResearchProposal.bbl [6] [7] [8]) [9]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 310.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 310.
+) (./ResearchProposal.bbl [4] [5]) [6]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 314.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 314.
  (./ResearchProposal.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 310.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 310.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 314.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 314.
 Package rerunfilecheck Info: File `ResearchProposal.out' has not changed.
-(rerunfilecheck)             Checksum: 2CF39C8C7C3405F4ABC331BBFDA77774;664.
-
-
-LaTeX Warning: There were undefined references.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 310.
+(rerunfilecheck)             Checksum: 20D9F42A29A8420FD36D0E580B9C6575;482.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 314.
  ) 
 Here is how much of TeX's memory you used:
- 20836 strings out of 481239
- 383986 string characters out of 5920378
- 727214 words of memory out of 5000000
- 35577 multiletter control sequences out of 15000+600000
- 568052 words of font info for 94 fonts, out of 8000000 for 9000
+ 20796 strings out of 481239
+ 383264 string characters out of 5920378
+ 730965 words of memory out of 5000000
+ 35559 multiletter control sequences out of 15000+600000
+ 565490 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,12n,60p,1764b,448s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/fontawesome/fontawesometwo.enc
-}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive
-/texmf-dist/fonts/type1/public/fontawesome/FontAwesome.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
-helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhv
-r8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on ResearchProposal.pdf (9 pages, 364648 bytes).
+ 60i,11n,60p,1764b,452s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic
+/uhvro8a.pfb>
+Output written on ResearchProposal.pdf (6 pages, 326288 bytes).
 PDF statistics:
- 357 PDF objects out of 1000 (max. 8388607)
- 309 compressed objects within 4 object streams
- 66 named destinations out of 1000 (max. 500000)
- 106 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 255 PDF objects out of 1000 (max. 8388607)
+ 215 compressed objects within 3 object streams
+ 58 named destinations out of 1000 (max. 500000)
+ 82 words of extra memory for PDF output out of 10000 (max. 10000000)
 

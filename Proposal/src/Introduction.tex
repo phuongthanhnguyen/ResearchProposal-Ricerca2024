@@ -5,7 +5,8 @@ an overload of information %coming
 from heterogeneous and rapidly evolving open sources. %The proliferation of open source repositories in recent years necessitates suitable toolings to mine the rich data sources~\cite{DBLP:journals/ese/RoccoRSNR21}. %When dealing with a growing information overload when discerning alternative development solutions. 
 Recommender systems for software engineering (RSSEs)~\cite{DBLP:books/sp/rsse2014} serve as an effective means %have been developed % assist software engineers in Thus, recommender systems in software engineering
 to provide developers with instant support %recommendations 
-consisting of different items, \eg code examples~\cite{Fowkes:2016:PPA:2950290.2950319,Nguyen:2019:FRS:3339505.3339636}, possible third-party components~\cite{NGUYEN2019110460,Ouni:2017:SSL:3032135.3032325,6671293}, documentation, to name a few. Nevertheless, while the main effort has been spent to make RSSEs more effective and efficient, there are several issues related to fairness and robustness that have not attracted enough attention from the research community, as shown below.
+consisting of different items, \eg code examples~\cite{Fowkes:2016:PPA:2950290.2950319,Nguyen:2019:FRS:3339505.3339636}, possible third-party components~\cite{NGUYEN2019110460,Ouni:2017:SSL:3032135.3032325,6671293}, documentation, to name a few. Nevertheless, while the main effort has been spent to make RSSEs more effective and efficient, there are several issues %related to fairness and robustness 
+that have not attracted enough attention from the research community. %, as shown below.
 
 
 %the research community.
@@ -49,6 +50,33 @@ used by several developers~\cite{10174041}. While this favors artifacts that are
 
 
 
+In our recent work~\cite{10174041}, by means of mixed methods research, \ie performing both a qualitative and quantitative evaluation, we studied popularity bias recommender systems for mining third-party libraries (TPLs). % to study the presence of popularity bias in TPL RSSEs. 
+%,MacDonellSKM10,DBLP:conf/ease/Wohlin14
+First, following existing guidelines for such type of study software engineering \cite{KitchenhamBLBB11}, we investigated whether state-of-the-art research has already tackled the issue of popularity bias. %The literature analysis, we investigate to what extent the popularity bias in TPL RSSEs has ever been studied by state-of-the-art research. 
+Interestingly, the literature review on major software engineering venues reveals that the issue of dealing with popularity bias has not received enough attention from the community. All of the surveyed studies tackled different issues in library recommendation, with the main aim of improving the relevance of the final ranked list, %The empirical study reveals that the issue of dealing with popularity in TPL RSSEs has not received adequate attention from the software engineering community. 
+%Among the surveyed work, 
+only one work attempts to tackle popularity, unfortunately, it fails to maintain a trade-off between fairness and accuracy. %getting a low recommendation accuracy. 
+
+Then, we performed a quantitative evaluation on \numSys existing TPL RSSEs, exploring their capability to deal with %the recommendation of 
+popular artifacts. %Finally, we propose a mechanism to defuse popularity bias in the recommendation list. 
+%Though we do not aim for a complete, detailed systematic literature review, .
+%The finding is further confirmed with an empirical evaluation on \numSys TPL RSSEs, \ie 
+The experiments showed that three among the considered systems provide to developers highly popular TPLs. The remaining system, while being able to lessen the effect of frequent TPLs, suffers from a low accuracy. Altogether, we see that cutting-edge research in software engineering neglects the issue of popularity bias in TPL recommender systems, leaving a research gap that has to be %properly 
+bridged.
+
+
+Our work was positively received by the reviewers, and %it was 
+accepted for publication in a CORE Rank A conference\footnote{\url{http://portal.core.edu.au/conf-ranks/?search=MSR&by=all&source=CORE2023&sort=atitle&page=1}} with the following details: %as follows:%with the following details: 
+%in the following paper:
+%The results of this work have been published in the following paper:
+%\vspace{-.1cm}
+\begin{itemize}
+	\item \small{\underline{Phuong T. Nguyen}, Riccardo Rubei, Juri Di Rocco, Claudio Di Sipio, Davide Di Ruscio, Massimiliano Di Penta ``\emph{Dealing with Popularity Bias in Recommender Systems for Third-party Libraries: How far Are We?}'', in Proceedings of the IEEE/ACM 20th Int. Conf. on Mining Software Repositories (MSR 2023), %Melbourne, Australia, 2023, 
+		DOI: \href{https://doi.org/10.1109/MSR59073.2023.00016}{10.1109/MSR59073.20\-23.00016}.}
+\end{itemize}
+%\vspace{-.4cm}
+
+
 %As found for \CR, state-of-the-art TPL RSSEs may not properly leverage peculiar aspects of a project, \eg related to implementation solutions. Hence, they fail to recommend some relevant goals, architecture- or solution-specific libraries.
 
 
@@ -82,9 +110,12 @@ used by several developers~\cite{10174041}. While this favors artifacts that are
 
 \textbf{Research gap.} %Our ongoing research~\cite{9678946,10174041,10.1145/3463274.3463809} %(summarized in Section~\ref{sec:CurrentResults}) 
 %has shown 
-Through systematic literature reviews, we carefully investigated state-of-the-art studies published in several software engineering venues. We found out that while recommender systems have become more effective at suggesting relevant items, they are prone to popularity bias~\cite{10174041}. %and adversarial attacks~\cite{10.1145/3463274.3463809,9678946}. %Our study suggests that while the research community either underestimates or ignores it, the possibility of using falsified data to trick RSSE \emph{is always present}, leaving a potential danger to software systems. 
-In particular, we realized that dealing with popularity bias in TPL recommender systems has not gained traction from the software engineering community. Among the considered studies, only one approach tries to improve diversity in the recommendation results, nevertheless it suffers from a low prediction accuracy. Moreover, while AML has been well studied in other domains, \eg online shopping systems~\cite{10.1145/3336191.3371877,10.1007/s10462-012-9364-9}, or computer vision~\cite{conf/cvpr/NguyenYC15}, there exists no work discussing adversarial attempts to RSSEs. In fact, the majority of existing studies %the research %related to RSSEs 
-attempt to improve the prediction accuracy, and no effort has been spent to tackle popularity bias~\cite{10174041}. %, %study the problem of using 
+%Through systematic literature reviews, we carefully investigated state-of-the-art studies published in several software engineering venues. 
+In our previous work~\cite{10174041}, we found out that while RSSEs have become more effective at suggesting relevant items, they are prone to popularity bias. %~\cite{10174041}. %and adversarial attacks~\cite{10.1145/3463274.3463809,9678946}. %Our study suggests that while the research community either underestimates or ignores it, the possibility of using falsified data to trick RSSE \emph{is always present}, leaving a potential danger to software systems. 
+%In particular, 
+%In our previous work~\cite{10174041}, we found out that dealing with popularity bias in TPL recommender systems has not gained traction from the software engineering community. 
+Among the considered studies, only one approach tries to improve diversity in the recommendation results, nevertheless it suffers from a low prediction accuracy. %Moreover, while AML has been well studied in other domains, \eg online shopping systems~\cite{10.1145/3336191.3371877,10.1007/s10462-012-9364-9}, or computer vision~\cite{conf/cvpr/NguyenYC15}, there exists no work discussing adversarial attempts to RSSEs. %In fact, the majority of existing studies %the research %related to RSSEs 
+%attempt to improve the prediction accuracy, and no effort has been spent to tackle popularity bias~\cite{10174041}. %, %study the problem of using 
 %as well as to deal with the abuse of intentionally manipulated data to compromise recommender systems~\cite{9678946,10.1145/3463274.3463809}. So far, there are no concrete countermeasures that can be instantly deployed to defend RSSEs against attacks. 
 %, as well as to . %, as well as conceiving counteractions. %
 %While the Software Engineering community either underestimates or ignores it, the possibility of using falsified data to trick RSSE is always present, leaving a potential danger to software systems.
@@ -105,16 +136,15 @@ with the ultimate aim of \emph{devising effective mechanisms to improve the fair
 %\end{itemize}
 
 
-\textbf{Expected contributions.} If the proposal is funded by %securing funding from 
-VIASM, %my envisioned contributions entail the establishment of a %dedicated 
-I will %collaborate with my colleagues at the School of Information and Communications Technology (SOICT), Hanoi University of Science and Technology (HUST),
+\textbf{Expected contributions.} %If the proposal is funded, % by %securing funding from 
+%VIASM, %my envisioned contributions entail the establishment of a %dedicated 
+%I will %collaborate with my colleagues at the School of Information and Communications Technology (SOICT), Hanoi University of Science and Technology (HUST),
 %research team at the University of L'Aquila, 
 %specifically focused on addressing crucial challenges within the domain. We 
-invest efforts to conduct %comprehensive 
-research to identify potential threats and devise effective countermeasures~\cite{10.1007/978-3-030-49461-2_18}. The ultimate goal is to empower RSSEs %Recommender Systems for Software Engineering (RSSEs) 
-with the capability to effectively deal with popularity bias, while maintaining or even enhancing their accuracy.
-
-My work is expected to have the following contributions: %stands out from existing research in the following key aspects: % key ways:
+%invest efforts to conduct %comprehensive 
+%research to identify potential threats and devise effective countermeasures~\cite{10.1007/978-3-030-49461-2_18}. 
+Our work aims to empower RSSEs %Recommender Systems for Software Engineering (RSSEs) 
+with the capability to effectively deal with popularity bias, while maintaining or even enhancing their accuracy. The main contributions are as follows: %stands out from existing research in the following key aspects: % key ways:
 
 \begin{itemize}
 
