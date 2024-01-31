@@ -46,38 +46,6 @@ H.~Abdollahpouri, M.~Mansoury, R.~Burke, and B.~Mobasher, ``The unfairness of
 C.~Anderson, \emph{The Long Tail: Why the Future of Business Is Selling Less of
   More}.\hskip 1em plus 0.5em minus 0.4em\relax Hyperion, 2006.
 
-\bibitem{10.1007/978-3-030-49461-2_18}
-V.~W. Anelli, Y.~Deldjoo, T.~Di~Noia, E.~Di~Sciascio, and F.~A. Merra, ``Sasha:
-  Semantic-aware shilling attacks on recommender systems exploiting knowledge
-  graphs,'' in \emph{The Semantic Web}.\hskip 1em plus 0.5em minus 0.4em\relax
-  Cham: Springer International Publishing, 2020, pp. 307--323.
-
-\bibitem{ChakrabortyMM21}
-J.~Chakraborty, S.~Majumder, and T.~Menzies, ``Bias in machine learning
-  software: why? how? what to do?'' in \emph{{ESEC/FSE} '21, Athens, Greece,
-  August 23-28, 2021}.\hskip 1em plus 0.5em minus 0.4em\relax {ACM}, 2021, pp.
-  429--440.
-
-\bibitem{ChakrabortyM0M20}
-J.~Chakraborty, S.~Majumder, Z.~Yu, and T.~Menzies, ``Fairway: a way to build
-  fair {ML} software,'' in \emph{{ESEC/FSE} '20, Virtual Event, USA, November
-  8-13, 2020}.\hskip 1em plus 0.5em minus 0.4em\relax {ACM}, 2020, pp.
-  654--665.
-
-\bibitem{10.1007/s10664-018-9657-y}
-\BIBentryALTinterwordspacing
-C.~Chen, Z.~Xing, and Y.~Liu, ``What's spain's paris? mining analogical
-  libraries from q\&a discussions,'' \emph{Empirical Softw. Engg.}, vol.~24,
-  no.~3, p. 1155–1194, jun 2019. [Online]. Available:
-  \url{https://doi.org/10.1007/s10664-018-9657-y}
-\BIBentrySTDinterwordspacing
-
-\bibitem{8630054}
-C.~Chen, Z.~Xing, Y.~Liu, and K.~O.~L. Xiong, ``Mining likely analogical apis
-  across third-party libraries via large-scale unsupervised api semantics
-  embedding,'' \emph{IEEE Transactions on Software Engineering}, vol.~47,
-  no.~3, pp. 432--447, 2021.
-
 \bibitem{10.1145/3564284}
 \BIBentryALTinterwordspacing
 J.~Chen, H.~Dong, X.~Wang, F.~Feng, M.~Wang, and X.~He†, ``Bias and debias in
@@ -94,14 +62,6 @@ B.~d'Alessandro, C.~O'Neil, and T.~LaGatta, ``Conscientious classification: A
   Available: \url{https://doi.org/10.1089/big.2016.0048}
 \BIBentrySTDinterwordspacing
 
-\bibitem{DBLP:journals/tec/DebAPM02}
-\BIBentryALTinterwordspacing
-K.~Deb, S.~Agrawal, A.~Pratap, and T.~Meyarivan, ``A fast and elitist
-  multiobjective genetic algorithm: {NSGA-II},'' \emph{{IEEE} Trans. Evol.
-  Comput.}, vol.~6, no.~2, pp. 182--197, 2002. [Online]. Available:
-  \url{https://doi.org/10.1109/4235.996017}
-\BIBentrySTDinterwordspacing
-
 \bibitem{10.1145/3336191.3371877}
 \BIBentryALTinterwordspacing
 Y.~Deldjoo, T.~Di~Noia, and F.~A. Merra, ``Adversarial machine learning in
@@ -112,35 +72,11 @@ Y.~Deldjoo, T.~Di~Noia, and F.~A. Merra, ``Adversarial machine learning in
   \url{https://doi.org/10.1145/3336191.3371877}
 \BIBentrySTDinterwordspacing
 
-\bibitem{DBLP:journals/ese/RoccoRSNR21}
-\BIBentryALTinterwordspacing
-J.~{Di Rocco}, D.~{Di Ruscio}, C.~{Di Sipio}, P.~T. Nguyen, and R.~Rubei,
-  ``Development of recommendation systems for software engineering: the
-  {CROSSMINER} experience,'' \emph{Empir. Softw. Eng.}, vol.~26, no.~4, p.~69,
-  2021. [Online]. Available: \url{https://doi.org/10.1007/s10664-021-09963-7}
-\BIBentrySTDinterwordspacing
-
-\bibitem{10.5555/3001460.3001507}
-M.~Ester, H.-P. Kriegel, J.~Sander, and X.~Xu, ``A density-based algorithm for
-  discovering clusters in large spatial databases with noise,'' in
-  \emph{Proceedings of the Second International Conference on Knowledge
-  Discovery and Data Mining}, ser. KDD'96.\hskip 1em plus 0.5em minus
-  0.4em\relax AAAI Press, 1996, p. 226–231.
-
 \bibitem{Fowkes:2016:PPA:2950290.2950319}
 J.~Fowkes and C.~Sutton, ``{Parameter-free Probabilistic API Mining Across
   GitHub},'' in \emph{24th ACM SIGSOFT International Symposium on Foundations
   of Software Engineering}.\hskip 1em plus 0.5em minus 0.4em\relax New York:
   ACM, 2016, pp. 254--265.
-
-\bibitem{Ge:2010_catalog_coverage}
-\BIBentryALTinterwordspacing
-M.~Ge, C.~Delgado-Battenfeld, and D.~Jannach, ``Beyond accuracy: Evaluating
-  recommender systems by coverage and serendipity,'' in \emph{Proceedings of
-  the Fourth ACM Conference on Recommender Systems}, ser. RecSys '10.\hskip 1em
-  plus 0.5em minus 0.4em\relax New York, NY, USA: ACM, 2010, pp. 257--260.
-  [Online]. Available: \url{http://doi.acm.org/10.1145/1864708.1864761}
-\BIBentrySTDinterwordspacing
 
 \bibitem{10.1007/s10462-012-9364-9}
 \BIBentryALTinterwordspacing
@@ -149,11 +85,6 @@ I.~Gunes, C.~Kaleli, A.~Bilge, and H.~Polat, ``Shilling attacks against
   vol.~42, no.~4, p. 767–799, Dec. 2014. [Online]. Available:
   \url{https://doi.org/10.1007/s10462-012-9364-9}
 \BIBentrySTDinterwordspacing
-
-\bibitem{9043686}
-Q.~{He}, B.~{Li}, F.~{Chen}, J.~{Grundy}, X.~{Xia}, and Y.~{Yang},
-  ``Diversified third-party library prediction for mobile app development,''
-  \emph{IEEE Transactions on Software Engineering}, pp. 1--1, 2020.
 
 \bibitem{KitchenhamBLBB11}
 \BIBentryALTinterwordspacing
@@ -164,29 +95,12 @@ B.~A. Kitchenham, P.~Brereton, Z.~Li, D.~Budgen, and A.~J. Burn,
   \url{https://doi.org/10.1049/ic.2011.0006}
 \BIBentrySTDinterwordspacing
 
-\bibitem{10.1145/3468264.3468552}
-\BIBentryALTinterwordspacing
-B.~Li, Q.~He, F.~Chen, X.~Xia, L.~Li, J.~Grundy, and Y.~Yang, ``Embedding
-  app-library graph for neural third party library recommendation,'' in
-  \emph{Proceedings of the 29th ACM Joint Meeting on European Software
-  Engineering Conference and Symposium on the Foundations of Software
-  Engineering}, ser. ESEC/FSE 2021.\hskip 1em plus 0.5em minus 0.4em\relax New
-  York, NY, USA: Association for Computing Machinery, 2021, p. 466–477.
-  [Online]. Available: \url{https://doi.org/10.1145/3468264.3468552}
-\BIBentrySTDinterwordspacing
-
 \bibitem{DBLP:journals/corr/abs-1809-02921}
 \BIBentryALTinterwordspacing
 W.~Liu and R.~Burke, ``Personalizing fairness-aware re-ranking,'' \emph{CoRR},
   vol. abs/1809.02921, 2018. [Online]. Available:
   \url{http://arxiv.org/abs/1809.02921}
 \BIBentrySTDinterwordspacing
-
-\bibitem{9825781}
-K.~W. Nafi, M.~Asaduzzaman, B.~Roy, C.~K. Roy, and K.~A. Schneider, ``Mining
-  software information sites to recommend cross-language analogical
-  libraries,'' in \emph{2022 IEEE International Conference on Software
-  Analysis, Evolution and Reengineering (SANER)}, 2022, pp. 913--924.
 
 \bibitem{conf/cvpr/NguyenYC15}
 \BIBentryALTinterwordspacing
@@ -215,6 +129,26 @@ P.~T. Nguyen, J.~Di~Rocco, D.~Di~Ruscio, L.~Ochoa, T.~Degueule, and
   \url{https://doi.org/10.1109/ICSE.2019.00109}
 \BIBentrySTDinterwordspacing
 
+\bibitem{10.1145/3463274.3463809}
+\BIBentryALTinterwordspacing
+P.~T. Nguyen, D.~Di~Ruscio, J.~Di~Rocco, C.~Di~Sipio, and M.~Di~Penta,
+  ``Adversarial machine learning: On the resilience of third-party library
+  recommender systems,'' in \emph{Proceedings of the 25th Int. Conf. on
+  Evaluation and Assessment in Software Engineering}, ser. EASE '21.\hskip 1em
+  plus 0.5em minus 0.4em\relax New York, NY, USA: Association for Computing
+  Machinery, 2021, p. 247–253. [Online]. Available:
+  \url{https://doi.org/10.1145/3463274.3463809}
+\BIBentrySTDinterwordspacing
+
+\bibitem{9678946}
+\BIBentryALTinterwordspacing
+P.~T. Nguyen, C.~Di~Sipio, J.~Di~Rocco, M.~Di~Penta, and D.~Di~Ruscio,
+  ``Adversarial attacks to api recommender systems: Time to wake up and smell
+  the coffee?'' in \emph{2021 36th IEEE/ACM Int. Conf. on Automated Software
+  Engineering (ASE)}, 2021, pp. 253--265. [Online]. Available:
+  \url{https://doi.org/10.1109/ASE51524.2021.9678946}
+\BIBentrySTDinterwordspacing
+
 \bibitem{10174041}
 \BIBentryALTinterwordspacing
 P.~T. Nguyen, R.~Rubei, J.~Di~Rocco, C.~Di~Sipio, D.~Di~Ruscio, and
@@ -237,36 +171,12 @@ I.~Ozkaya, ``Application of large language models to software engineering
   tasks: Opportunities, risks, and implications,'' \emph{IEEE Software},
   vol.~40, no.~3, pp. 4--8, 2023.
 
-\bibitem{10.1145/1454008.1454012}
-\BIBentryALTinterwordspacing
-Y.-J. Park and A.~Tuzhilin, ``The long tail of recommender systems and how to
-  leverage it,'' in \emph{Proceedings of the 2008 ACM Conference on Recommender
-  Systems}, ser. RecSys '08.\hskip 1em plus 0.5em minus 0.4em\relax New York,
-  NY, USA: Association for Computing Machinery, 2008, p. 11–18. [Online].
-  Available: \url{https://doi.org/10.1145/1454008.1454012}
-\BIBentrySTDinterwordspacing
-
 \bibitem{DBLP:books/sp/rsse2014}
 \BIBentryALTinterwordspacing
 M.~P. Robillard, W.~Maalej, R.~J. Walker, and T.~Zimmermann,
   \emph{Recommendation Systems in Software Engineering}.\hskip 1em plus 0.5em
   minus 0.4em\relax Springer, 2014. [Online]. Available:
   \url{https://doi.org/10.1007/978-3-642-45135-5}
-\BIBentrySTDinterwordspacing
-
-\bibitem{9825861}
-R.~Rubei, C.~Di~Sipio, J.~Di~Rocco, D.~Di~Ruscio, and P.~T. Nguyen, ``Endowing
-  third-party libraries recommender systems with explicit user feedback
-  mechanisms,'' in \emph{2022 IEEE International Conference on Software
-  Analysis, Evolution and Reengineering (SANER)}, 2022, pp. 817--821.
-
-\bibitem{SAIED2018164}
-\BIBentryALTinterwordspacing
-M.~A. Saied, A.~Ouni, H.~Sahraoui, R.~G. Kula, K.~Inoue, and D.~Lo, ``Improving
-  reusability of software libraries through usage pattern mining,''
-  \emph{Journal of Systems and Software}, vol. 145, pp. 164 -- 179, 2018.
-  [Online]. Available:
-  \url{http://www.sciencedirect.com/science/article/pii/S0164121218301699}
 \BIBentrySTDinterwordspacing
 
 \bibitem{10.1145/1772690.1772780}
@@ -278,36 +188,12 @@ R.~L. Santos, C.~Macdonald, and I.~Ounis, ``Exploiting query reformulations for
   881–890. [Online]. Available: \url{https://doi.org/10.1145/1772690.1772780}
 \BIBentrySTDinterwordspacing
 
-\bibitem{9054865}
-\BIBentryALTinterwordspacing
-Z.~Sun, Y.~Liu, Z.~Cheng, C.~Yang, and P.~Che, ``Req2lib: A semantic neural
-  model for software library recommendation,'' in \emph{2020 IEEE 27th
-  International Conference on Software Analysis, Evolution and Reengineering
-  (SANER)}.\hskip 1em plus 0.5em minus 0.4em\relax Los Alamitos, CA, USA: IEEE
-  Computer Society, feb 2020, pp. 542--546. [Online]. Available:
-  \url{https://doi.ieeecomputersociety.org/10.1109/SANER48275.2020.9054865}
-\BIBentrySTDinterwordspacing
-
 \bibitem{DBLP:books/lib/SuttonB98}
 \BIBentryALTinterwordspacing
 R.~S. Sutton and A.~G. Barto, \emph{Reinforcement learning - an introduction},
   ser. Adaptive computation and machine learning.\hskip 1em plus 0.5em minus
   0.4em\relax {MIT} Press, 1998. [Online]. Available:
   \url{https://www.worldcat.org/oclc/37293240}
-\BIBentrySTDinterwordspacing
-
-\bibitem{6671293}
-F.~Thung, D.~Lo, and J.~Lawall, ``Automated library recommendation,'' in
-  \emph{2013 20th Working Conference on Reverse Engineering (WCRE)}, Oct 2013,
-  pp. 182--191.
-
-\bibitem{Vargas_sales_diversity_14}
-\BIBentryALTinterwordspacing
-S.~Vargas and P.~Castells, ``{Improving sales diversity by recommending users
-  to items},'' in \emph{Eighth {ACM} Conference on Recommender Systems, RecSys
-  '14, Foster City, Silicon Valley, CA, {USA} - October 06 - 10, 2014}, 2014,
-  pp. 145--152. [Online]. Available:
-  \url{http://doi.acm.org/10.1145/2645710.2645744}
 \BIBentrySTDinterwordspacing
 
 \end{thebibliography}
