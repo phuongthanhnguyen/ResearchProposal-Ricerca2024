@@ -8,7 +8,7 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: ResearchProposal.bib
-Repeated entry---line 988 of file ResearchProposal.bib
+Repeated entry---line 998 of file ResearchProposal.bib
  : @article{NGUYEN2019110460
  :                          ,
 I'm skipping whatever remains of this entry
@@ -21,45 +21,45 @@ Warning--I didn't find a database entry for "conf/cvpr/2015"
 ** Sorting version - not for normal IEEE work.
 
 Done.
-You've used 21 entries,
+You've used 22 entries,
             4566 wiz_defined-function locations,
-            1075 strings with 14181 characters,
-and the built_in function-call counts, 20081 in all, are:
-= -- 1810
-> -- 605
-< -- 92
-+ -- 300
-- -- 163
-* -- 1135
-:= -- 3095
-add.period$ -- 50
-call.type$ -- 21
-change.case$ -- 144
-chr.to.int$ -- 201
-cite$ -- 21
-duplicate$ -- 1281
-empty$ -- 1484
-format.name$ -- 184
-if$ -- 4545
+            1080 strings with 14404 characters,
+and the built_in function-call counts, 21164 in all, are:
+= -- 1903
+> -- 629
+< -- 103
++ -- 314
+- -- 167
+* -- 1188
+:= -- 3238
+add.period$ -- 52
+call.type$ -- 22
+change.case$ -- 149
+chr.to.int$ -- 231
+cite$ -- 22
+duplicate$ -- 1347
+empty$ -- 1571
+format.name$ -- 189
+if$ -- 4801
 int.to.chr$ -- 0
-int.to.str$ -- 21
-missing$ -- 232
-newline$ -- 122
-num.names$ -- 46
-pop$ -- 631
+int.to.str$ -- 22
+missing$ -- 241
+newline$ -- 125
+num.names$ -- 48
+pop$ -- 656
 preamble$ -- 1
-purify$ -- 120
+purify$ -- 124
 quote$ -- 2
-skip$ -- 1490
+skip$ -- 1575
 stack$ -- 0
-substring$ -- 682
-swap$ -- 976
-text.length$ -- 25
+substring$ -- 758
+swap$ -- 1031
+text.length$ -- 26
 text.prefix$ -- 0
 top$ -- 6
-type$ -- 213
+type$ -- 224
 warning$ -- 0
-while$ -- 84
-width$ -- 23
-write$ -- 276
+while$ -- 90
+width$ -- 24
+write$ -- 285
 (There were 2 error messages)

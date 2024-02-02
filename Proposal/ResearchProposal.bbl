@@ -196,4 +196,9 @@ R.~S. Sutton and A.~G. Barto, \emph{Reinforcement learning - an introduction},
   \url{https://www.worldcat.org/oclc/37293240}
 \BIBentrySTDinterwordspacing
 
+\bibitem{wang2020exposure}
+C.~Wang and R.~Sennrich, ``On exposure bias, hallucination and domain shift in
+  neural machine translation,'' in \emph{Proceedings of the 58th Annual Meeting
+  of the Association for Computational Linguistics}, 2020, pp. 3544--3552.
+
 \end{thebibliography}

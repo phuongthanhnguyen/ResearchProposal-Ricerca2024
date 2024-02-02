@@ -136,7 +136,8 @@ Within the funded project, we are going to answer the following research questio
 %\LS~\cite{9043686} is the very first TPL RSSE to mitigate the abundance of highly frequent libraries, following the \emph{in-processing} approach. \LS attempts to neutralize the bias caused by the popularity of TPLs using an adaptive weighting mechanism. However, while it can diversify the recommendations, \LS suffers from a low accuracy (see RQ2 in Section~\ref{sec:RQ2}). This implies that there is still room for improvement, \ie conceiving more effective in-processing techniques for RSSEs.
 
 
-To answer the research question, correspondingly we divide the tasks into two tasks, namely \textbf{T1} and \textbf{T2} (see Figure~\ref{fig:SystemArchitecture}), and they are explained in the succeeding subsections.
+To answer the research question, correspondingly we divide the activities into three tasks, namely \textbf{T1}, \textbf{T2}, and \textbf{T3} (see Figure~\ref{fig:SystemArchitecture}), %and they are 
+explained in the succeeding subsections.
 %\vspace{-.4cm}
 
 
@@ -145,7 +146,12 @@ To answer the research question, correspondingly we divide the tasks into two ta
 \subsection{Defusing popularity bias}
 
 %Our work~\cite{10174041} reveals that the issue of popularity bias in RSSEs has not attracted attention from the research community, triggering the need for effective counteracting mechanisms. 
-Looking to other domains, we see that there are three major methods to defuse bias in general, \ie the pre-processing, in-processing, and post-processing paradigms~\cite{doi:10.1089/big.2016.0048}. We suppose that these can also be adopted in software engineering for the same purpose. %as it was also advocated by Chakraborty \etal \cite{ChakrabortyM0M20}, though not directly for RSSEs. 
+
+The application of various Machine Learning algorithms to tackle bias in RSSEs.
+
+Looking to other domains, we see that there are three major methods to defuse bias in general, \ie the pre-processing, in-processing, and post-processing paradigms~\cite{doi:10.1089/big.2016.0048}. Our proposed approach is based on three main techniques, \ie .
+
+We suppose that these can also be adopted in software engineering for the same purpose. %as it was also advocated by Chakraborty \etal \cite{ChakrabortyM0M20}, though not directly for RSSEs. 
 We are going to perform the following tasks:
 
 \begin{itemize}
@@ -160,6 +166,9 @@ We are going to perform the following tasks:
 	attempt to reduce the number of popular items, as well as to increase the number of unpopular (but useful) ones in the results. However, our empirical evaluation on two recommender systems showed that while introducing diversity in the recommendation results, it also introduces a setback in the prediction accuracy. Our findings suggest that %Software Engineering 
 	further research should be conducted to propose effective countermeasures. We suppose that it is crucial to consider %further improve it by considering 
 	additional factors, \eg the degree of specificity (to certain solutions) of a library, when it comes to providing recommendation. Thus, we will deploy Reinforcement Learning to implement effective post-processing techniques to defuse popularity bias, aiming to improve diversity in the recommendations, while keeping a reasonable prediction accuracy. % without touching the internal design of the considered systems.
+	\item \textbf{T3: Self-improvement learning for improving ranking.} %Recently, various algorithms have been proposed to improve the learning processing. 
+	Self-improvement learning allows a model to incorporate its own predictions into the training process~\cite{wang2020exposure}. This helps it to learn from its errors, thereby lessening the effects of exposure bias. Such an algorithm can be applied to improve ranking of items provided by a recommender system. In particular, we train the model with collected training data, and once the model has been trained, it is used to generate for each sample in the training dataset a set of predictions. For each training sample, we compute the diversity scores between the ground-truth list and all the predictions. The predicted libraries with the highest diversity is then chosen to replace the ground-truth one. We get a new training pair composed of the input sample, and the new ground-truth library. By replicating the steps with all the training samples, we get the so-called augmented training dataset that can then be used to re-train the model.
+
 	% ...%The technique is built 
 %Starting from an initial ranked list $R$, we look for the long-tail items in the list, and promote them to upper positions to yield a new list $S$. %We call %$R$ as the list provided by a recommender, and 
 %$S$ is initially set to $\varnothing$, and iteratively populated by enrolling new items using the following formula.
