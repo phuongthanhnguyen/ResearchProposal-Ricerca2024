@@ -21,45 +21,45 @@ Warning--I didn't find a database entry for "conf/cvpr/2015"
 ** Sorting version - not for normal IEEE work.
 
 Done.
-You've used 22 entries,
+You've used 24 entries,
             4566 wiz_defined-function locations,
-            1080 strings with 14404 characters,
-and the built_in function-call counts, 21164 in all, are:
-= -- 1903
-> -- 629
-< -- 103
-+ -- 314
-- -- 167
-* -- 1188
-:= -- 3238
-add.period$ -- 52
-call.type$ -- 22
-change.case$ -- 149
-chr.to.int$ -- 231
-cite$ -- 22
-duplicate$ -- 1347
-empty$ -- 1571
-format.name$ -- 189
-if$ -- 4801
+            1092 strings with 14812 characters,
+and the built_in function-call counts, 23212 in all, are:
+= -- 2075
+> -- 704
+< -- 116
++ -- 352
+- -- 187
+* -- 1300
+:= -- 3529
+add.period$ -- 57
+call.type$ -- 24
+change.case$ -- 165
+chr.to.int$ -- 264
+cite$ -- 24
+duplicate$ -- 1474
+empty$ -- 1721
+format.name$ -- 211
+if$ -- 5269
 int.to.chr$ -- 0
-int.to.str$ -- 22
-missing$ -- 241
-newline$ -- 125
-num.names$ -- 48
-pop$ -- 656
+int.to.str$ -- 24
+missing$ -- 264
+newline$ -- 131
+num.names$ -- 52
+pop$ -- 727
 preamble$ -- 1
-purify$ -- 124
+purify$ -- 138
 quote$ -- 2
-skip$ -- 1575
+skip$ -- 1716
 stack$ -- 0
-substring$ -- 758
-swap$ -- 1031
-text.length$ -- 26
+substring$ -- 847
+swap$ -- 1128
+text.length$ -- 28
 text.prefix$ -- 0
 top$ -- 6
-type$ -- 224
+type$ -- 246
 warning$ -- 0
-while$ -- 90
-width$ -- 24
-write$ -- 285
+while$ -- 101
+width$ -- 26
+write$ -- 303
 (There were 2 error messages)

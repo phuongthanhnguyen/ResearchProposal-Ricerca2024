@@ -46,6 +46,12 @@ H.~Abdollahpouri, M.~Mansoury, R.~Burke, and B.~Mobasher, ``The unfairness of
 C.~Anderson, \emph{The Long Tail: Why the Future of Business Is Selling Less of
   More}.\hskip 1em plus 0.5em minus 0.4em\relax Hyperion, 2006.
 
+\bibitem{ChakrabortyM0M20}
+J.~Chakraborty, S.~Majumder, Z.~Yu, and T.~Menzies, ``Fairway: a way to build
+  fair {ML} software,'' in \emph{{ESEC/FSE} '20, Virtual Event, USA, November
+  8-13, 2020}.\hskip 1em plus 0.5em minus 0.4em\relax {ACM}, 2020, pp.
+  654--665.
+
 \bibitem{10.1145/3564284}
 \BIBentryALTinterwordspacing
 J.~Chen, H.~Dong, X.~Wang, F.~Feng, M.~Wang, and X.~He†, ``Bias and debias in
@@ -85,6 +91,11 @@ I.~Gunes, C.~Kaleli, A.~Bilge, and H.~Polat, ``Shilling attacks against
   vol.~42, no.~4, p. 767–799, Dec. 2014. [Online]. Available:
   \url{https://doi.org/10.1007/s10462-012-9364-9}
 \BIBentrySTDinterwordspacing
+
+\bibitem{9043686}
+Q.~{He}, B.~{Li}, F.~{Chen}, J.~{Grundy}, X.~{Xia}, and Y.~{Yang},
+  ``Diversified third-party library prediction for mobile app development,''
+  \emph{IEEE Transactions on Software Engineering}, pp. 1--1, 2020.
 
 \bibitem{KitchenhamBLBB11}
 \BIBentryALTinterwordspacing

@@ -20,8 +20,9 @@
 
 
 %The research aims to contribute to the resilience and trustworthiness of recommender systems used in software engineering contexts, ultimately safeguarding users and valuable software assets. 
-Figure~\ref{fig:SystemArchitecture} depicts the architecture with the proposed module printed in the cyan color, which can be independently assembled to any existing recomender systems, %. The first module is used to detect and eliminate adversarial intents disguised in the training data, meanwhile, the second module is 
-being padded right before the interface to developers to defuse popularity bias.
+Figure~\ref{fig:SystemArchitecture} depicts the architecture with the proposed module printed in the cyan color, which can be independently assembled to any existing recomender systems %. The first module is used to detect and eliminate adversarial intents disguised in the training data, meanwhile, the second module is 
+%being padded right before the interface to developers 
+to defuse popularity bias.
 This section presents our proposed approach to fill the research gap introduced in Section~\ref{sec:Introduction}. %, before presenting the results.
 
 
@@ -136,23 +137,27 @@ Within the funded project, we are going to answer the following research questio
 %\LS~\cite{9043686} is the very first TPL RSSE to mitigate the abundance of highly frequent libraries, following the \emph{in-processing} approach. \LS attempts to neutralize the bias caused by the popularity of TPLs using an adaptive weighting mechanism. However, while it can diversify the recommendations, \LS suffers from a low accuracy (see RQ2 in Section~\ref{sec:RQ2}). This implies that there is still room for improvement, \ie conceiving more effective in-processing techniques for RSSEs.
 
 
-To answer the research question, correspondingly we divide the activities into three tasks, namely \textbf{T1}, \textbf{T2}, and \textbf{T3} (see Figure~\ref{fig:SystemArchitecture}), %and they are 
-explained in the succeeding subsections.
+To answer the research question, correspondingly we divide the activities into three tasks, namely \textbf{T1}, \textbf{T2}, and \textbf{T3}, % (see Figure~\ref{fig:SystemArchitecture}), %and they are 
+explained in the succeeding subsection.
 %\vspace{-.4cm}
+
+
 
 
 
 
 \subsection{Defusing popularity bias}
 
+
+Our research~\cite{10174041} reveals that software engineering research has not properly tackled popularity bias in RSSEs, triggering the need for effective counteracting mechanisms. 
+Looking at other domains, we see that there are three major methods to combat bias, \ie the pre-processing, in-processing, and post-processing paradigms~\cite{doi:10.1089/big.2016.0048}. We assume that they can also be adopted in Software Engineering for the same purpose, as it was advocated by Chakraborty \etal \cite{ChakrabortyM0M20}, though not directly for RSSEs. Moreover, we anticipate that reinforcement learning and self-improvement learning can be employed to defuse bias, bringing more diverse recommendation results. In this respect, our proposal is going to be based on three main topics as follows.
+%Also, as it can be seen from Section~\ref{sec:Results}, He \etal~\cite{9043686} conceived \LS--the very first TPL RSSE to mitigate the abundance of highly frequent libraries, following the \emph{in-processing} approach. \LS attempts to neutralize the bias caused by the popularity of TPLs using an adaptive weighting mechanism. However, while it can diversify the recommendations, \LS suffers from a low accuracy (see RQ$_2$ in Section~\ref{sec:RQ2}). This implies that there is still room for improvement, \ie conceiving more effective in-processing techniques for RSSEs. 
+
 %Our work~\cite{10174041} reveals that the issue of popularity bias in RSSEs has not attracted attention from the research community, triggering the need for effective counteracting mechanisms. 
-
-The application of various Machine Learning algorithms to tackle bias in RSSEs.
-
-Looking to other domains, we see that there are three major methods to defuse bias in general, \ie the pre-processing, in-processing, and post-processing paradigms~\cite{doi:10.1089/big.2016.0048}. Our proposed approach is based on three main techniques, \ie .
-
-We suppose that these can also be adopted in software engineering for the same purpose. %as it was also advocated by Chakraborty \etal \cite{ChakrabortyM0M20}, though not directly for RSSEs. 
-We are going to perform the following tasks:
+%The application of various Machine Learning algorithms to tackle bias in RSSEs.
+%Looking to other domains, we see that there are three major methods to defuse bias in general, \ie the pre-processing, in-processing, and post-processing paradigms~\cite{doi:10.1089/big.2016.0048}. Our proposed approach is based on three main techniques, \ie .
+%We suppose that these can also be adopted in software engineering for the same purpose. %as it was also advocated by Chakraborty \etal \cite{ChakrabortyM0M20}, though not directly for RSSEs. 
+%We are going to perform the following tasks:
 
 \begin{itemize}
 	\item \textbf{T1: Re-implementation of existing re-ranking mechanisms.} In our recent work~\cite{10174041}, we applied xQuAD \cite{10.1145/1772690.1772780} %--an algorithm for diversifying Web search results, 
@@ -167,7 +172,7 @@ We are going to perform the following tasks:
 	further research should be conducted to propose effective countermeasures. We suppose that it is crucial to consider %further improve it by considering 
 	additional factors, \eg the degree of specificity (to certain solutions) of a library, when it comes to providing recommendation. Thus, we will deploy Reinforcement Learning to implement effective post-processing techniques to defuse popularity bias, aiming to improve diversity in the recommendations, while keeping a reasonable prediction accuracy. % without touching the internal design of the considered systems.
 	\item \textbf{T3: Self-improvement learning for improving ranking.} %Recently, various algorithms have been proposed to improve the learning processing. 
-	Self-improvement learning allows a model to incorporate its own predictions into the training process~\cite{wang2020exposure}. This helps it to learn from its errors, thereby lessening the effects of exposure bias. Such an algorithm can be applied to improve ranking of items provided by a recommender system. In particular, we train the model with collected training data, and once the model has been trained, it is used to generate for each sample in the training dataset a set of predictions. For each training sample, we compute the diversity scores between the ground-truth list and all the predictions. The predicted libraries with the highest diversity is then chosen to replace the ground-truth one. We get a new training pair composed of the input sample, and the new ground-truth library. By replicating the steps with all the training samples, we get the so-called augmented training dataset that can then be used to re-train the model.
+	Self-improvement learning allows a model to incorporate its own predictions into the training process~\cite{wang2020exposure}. This enables the model learn from its errors, thereby lessening the effects of exposure bias. Such an algorithm can be applied to improve ranking of items provided by a recommender system. In particular, we train the model with collected training data, and once the model has been trained, it is used to generate for each sample in the training dataset a set of predictions. For each training sample, we compute the diversity scores between the ground-truth list and all the predictions. The predicted libraries with the highest diversity is then chosen to replace the ground-truth one. We get a new training pair composed of the input sample, and the new ground-truth library. By replicating the steps with all the training samples, we get the so-called augmented training dataset that can then be used to re-train the model.
 
 	% ...%The technique is built 
 %Starting from an initial ranked list $R$, we look for the long-tail items in the list, and promote them to upper positions to yield a new list $S$. %We call %$R$ as the list provided by a recommender, and 
