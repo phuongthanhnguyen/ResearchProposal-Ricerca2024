@@ -9,13 +9,15 @@
 
 
 
-When building new software, developers usually have to deal with %a large number of information sources. In such a context, the problem is not the lack but instead 
+When building new software, developers usually deal with %a large number of information sources. In such a context, the problem is not the lack but instead 
 an overload of information %coming 
-from heterogeneous and rapidly evolving open sources. %The proliferation of open source repositories in recent years necessitates suitable toolings to mine the rich data sources~\cite{DBLP:journals/ese/RoccoRSNR21}. %When dealing with a growing information overload when discerning alternative development solutions. 
-Recommender systems for software engineering (RSSEs)~\cite{DBLP:books/sp/rsse2014} serve as an effective means %have been developed % assist software engineers in Thus, recommender systems in software engineering
-to provide developers with instant support %recommendations 
-consisting of different items, \eg code examples~\cite{Fowkes:2016:PPA:2950290.2950319,Nguyen:2019:FRS:3339505.3339636}, possible third-party components~\cite{NGUYEN2019110460,Ouni:2017:SSL:3032135.3032325}, documentation, to name a few. Nevertheless, while the main effort has been spent to make RSSEs more effective and efficient, there are several issues %related to fairness and robustness 
-that have not attracted enough attention from the research community. %, as shown below.
+from heterogeneous sources. %The proliferation of open source repositories in recent years necessitates suitable toolings to mine the rich data sources~\cite{DBLP:journals/ese/RoccoRSNR21}. %When dealing with a growing information overload when discerning alternative development solutions. 
+Recommender systems for software engineering (RSSEs)~\cite{DBLP:books/sp/rsse2014} are an effective means %have been developed % assist software engineers in Thus, recommender systems in software engineering
+to provide developers with %instant support %recommendations 
+%consisting of 
+different items, \eg code~\cite{Fowkes:2016:PPA:2950290.2950319,Nguyen:2019:FRS:3339505.3339636}, third-party components~\cite{NGUYEN2019110460,Ouni:2017:SSL:3032135.3032325}. %, documentation, to name a few.
+Nevertheless, while the main effort has been spent to make RSSEs more effective and efficient, there are issues %related to fairness and robustness 
+that have not attracted enough attention from the community. %, as shown below.
 %the research community.
 %state-of-the-art re
 %Recommender systems in software engineering (RSSEs)~\cite{DBLP:books/sp/rsse2014} %have been conceptualized on a comparable basis, i.e., they
@@ -67,23 +69,29 @@ that have not attracted enough attention from the research community. %, as show
 %=================================
 %Our ongoing research~\cite{9678946,10174041,10.1145/3463274.3463809} %(summarized in Section~\ref{sec:CurrentResults}) 
 %has shown 
-In particular, even though RSSEs are becoming more and more effective in suggesting handy recommendations, they tend to suffer from popularity bias, \ie favoring items that are relevant mainly because several developers are using them. %While this rewards artifacts that  are likely more reliable and well-documented, it would also mean that missing artifacts are rarely used because they are very specific or more recent.
-Through systematic literature reviews, we carefully investigated state-of-the-art studies published in several software engineering venues. We found out that while recommender systems have become more effective at suggesting relevant items, they are prone to popularity bias~\cite{10174041} and adversarial attacks~\cite{10.1145/3463274.3463809,9678946}. %Our study suggests that while the research community either underestimates or ignores it, the possibility of using falsified data to trick RSSE \emph{is always present}, leaving a potential danger to software systems. 
-In particular, we realized that dealing with popularity bias in TPL recommender systems has not gained traction from the software engineering community. Among the considered studies, only one approach tries to improve diversity in the recommendation results, nevertheless it suffers from a low prediction accuracy. %Moreover, while AML has been well studied in other domains, \eg online shopping systems~\cite{10.1145/3336191.3371877,10.1007/s10462-012-9364-9}, or computer vision~\cite{conf/cvpr/NguyenYC15}, there exists no work discussing adversarial attempts to RSSEs. %In fact, the majority of existing studies %the research %related to RSSEs 
-attempt to improve the prediction accuracy, and no effort has been spent to tackle popularity bias~\cite{10174041}, %study the problem of using 
-as well as to deal with the abuse of intentionally manipulated data to compromise recommender systems~\cite{9678946,10.1145/3463274.3463809}. 
+%In particular, even though RSSEs are becoming more and more effective in suggesting handy recommendations, they tend to suffer from popularity bias, \ie favoring items that are relevant mainly because several developers are using them. %While this rewards artifacts that  are likely more reliable and well-documented, it would also mean that missing artifacts are rarely used because they are very specific or more recent.
+Through literature reviews, we investigated state-of-the-art studies emerging from %published in 
+several SE venues, and found out that RSSEs %while RSSEs have become more effective at suggesting relevant items, they 
+are prone to popularity bias~\cite{10174041}.% and adversarial attacks~\cite{10.1145/3463274.3463809,9678946}. %Our study suggests that while the research community either underestimates or ignores it, the possibility of using falsified data to trick RSSE \emph{is always present}, leaving a potential danger to software systems. 
+%In particular, we realized that dealing with popularity bias in TPL recommender systems has not gained traction from the software engineering community. Among the considered studies, only one approach tries to improve diversity in the recommendation results, nevertheless it suffers from a low prediction accuracy. %Moreover, while AML has been well studied in other domains, \eg online shopping systems~\cite{10.1145/3336191.3371877,10.1007/s10462-012-9364-9}, or computer vision~\cite{conf/cvpr/NguyenYC15}, there exists no work discussing adversarial attempts to RSSEs. %In fact, the majority of existing studies %the research %related to RSSEs 
+%attempt to improve the prediction accuracy, and no effort has been spent to tackle popularity bias~\cite{10174041}, %study the problem of using 
+%as well as to deal with the abuse of intentionally manipulated data to compromise recommender systems~\cite{9678946,10.1145/3463274.3463809}. 
 %So far, there are no concrete countermeasures that can be instantly deployed to defend RSSEs against attacks. 
 %, as well as to . %, as well as conceiving counteractions. %
 %While the Software Engineering community either underestimates or ignores it, the possibility of using falsified data to trick RSSE is always present, leaving a potential danger to software systems.
-In this respect, we see an urgent need to thoroughly study the related issues, %likely threats, 
-with the ultimate aim of \emph{devising effective mechanisms to improve the fairness in RSSEs}.
+%In this respect, we see an urgent need to thoroughly study the related issues, %likely threats, 
+%with the ultimate aim of \emph{devising effective mechanisms to improve the fairness in RSSEs}.
 
 
-This proposal represents an opportunity to contribute to the advancement of Machine Learning in Software Engineering, and aligns with the commitments to innovative research in the field of ethics and fairness for Artificial Intelligence (AI) systems. The core objective of this proposal is to develop effective techniques to address a key challenge, \ie improving fairness in recommender systems for software engineering. %and \emph{(ii)} fortifying RSSEs against adversarial attacks. 
+This proposal represents an opportunity to contribute to the advancement of Machine Learning in Software Engineering. %, and aligns with the commitments to innovative research in the field of ethics and fairness for Artificial Intelligence (AI) systems. 
+The core objective %of this proposal 
+is to develop effective techniques to improve %address a key challenge, \ie improving 
+fairness in RSSEs. %recommender systems for software engineering. %and \emph{(ii)} fortifying RSSEs against adversarial attacks. 
 %If my proposal gets funded, I will be able to promote and strengthen collaborations with different research groups in Hanoi. %would it pave the way for the collaboration with School of Information and Communications Technology (SOICT). %research 
 %team at the University of L'Aquila. 
 %Being Principal Investigator (PI), 
-Should this proposal receive funding, would it pave the way for the formation of a dedicated research team at the University of L'Aquila. Being Principal Investigator (PI), I will lead the team to work diligently to advance ongoing research efforts, and propose practical solutions that address unresolved issues in the field of Machine Learning for Software Engineering. 
+If this proposal receives funding, it will pave the way for the formation of a dedicated team. % at the University of L'Aquila. 
+Being Principal Investigator (PI), I will lead the team to work diligently to advance ongoing research efforts, and propose practical solutions that address unresolved issues. % in the field of Machine Learning for Software Engineering. 
 %We will be working diligently to advance ongoing research efforts, and propose practical solutions that address unresolved issues in the field of Machine Learning for Software Engineering. 
 
 
